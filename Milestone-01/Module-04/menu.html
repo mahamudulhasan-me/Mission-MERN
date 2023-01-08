@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      header {
+        float: right;
+        background-color: aquamarine;
+        width: 100%;
+      }
+      nav ul {
+        display: flex;
+      }
+      nav ul li {
+        list-style-type: none;
+      }
+      nav ul li a {
+        position: relative;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 15px;
+        z-index: 1;
+      }
+      nav ul li a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 100%;
+        transition: 0.4s;
+        z-index: -1;
+        border-radius: 5px;
+        background: linear-gradient(
+          to right,
+          #000529 1%,
+          #002055 24%,
+          #005db5 67%,
+          #0074d9 100%
+        );
+      }
+      nav ul li a:hover:before {
+        width: 100%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

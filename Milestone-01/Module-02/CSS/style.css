@@ -1,0 +1,161 @@
+body {
+  background-color: #f5fafd;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+* {
+  margin: 0 auto;
+}
+.container {
+  width: 80%;
+}
+.header {
+  height: 70px;
+  background-color: #f5fafd;
+}
+.menu-bar {
+  width: 50%;
+  padding: 25px;
+  float: right;
+  text-align: right;
+}
+.menu-bar ul li {
+  display: inline-block;
+}
+.menu-bar ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-weight: 600;
+}
+.menu-bar ul li a:hover {
+  background-color: #ffa500;
+  transition: 0.5s;
+}
+.menu-bar ul li .active {
+  background-color: orange;
+}
+
+.logo {
+  float: left;
+  padding: 20px;
+}
+.banner {
+  background-image: url("../Images/banner-bg.jpg");
+  width: 100%;
+  position: relative;
+  height: 300px;
+  padding-top: 80px;
+  background-size: cover;
+  background-color: #f5fafd;
+  background-blend-mode: color;
+}
+.name-info {
+  width: 40%;
+  float: left;
+  padding-left: 100px;
+}
+.title {
+  padding-top: 50px;
+  line-height: 30px;
+}
+.title section {
+  line-height: normal;
+  padding-top: 10px;
+}
+.image {
+  width: 50%;
+  float: right;
+}
+.banner .image img {
+  width: 300px;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  float: left;
+}
+.btn-section {
+  padding-top: 20px;
+}
+.btn-section a {
+  text-decoration: none;
+  color: #f5fafd;
+  font-weight: 600;
+}
+.btn-1 {
+  padding: 10px;
+  background-color: #ffa500;
+  border: 1px solid #e2980d;
+  color: #e2980d;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.btn-2 {
+  padding: 10px 20px;
+  border: 1px solid #e2980d;
+  border-radius: 5px;
+}
+.btn-2 a {
+  color: #e2980d;
+}
+/* About section CSS Start */
+.about {
+  text-align: center;
+  padding: 80px 0px;
+}
+.about-info {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 10px;
+  margin-bottom: 15px;
+}
+.services {
+  width: 100%;
+}
+.service-box {
+  width: 23%;
+  float: left;
+}
+
+/* Portfolio CSS Start */
+.portfolio {
+  text-align: center;
+  padding: 80px 0px;
+}
+.portfolio-title {
+  margin-bottom: 40px;
+}
+.portfolio .img img {
+  width: 30%;
+  padding: 5px;
+}
+
+/* Footer CSS Start */
+.footer {
+  padding-bottom: 40px;
+  height: 300px;
+}
+.connect {
+  width: 50%;
+  float: left;
+}
+.connect .text {
+  margin-bottom: 20px;
+}
+.connect .text h2 {
+  margin-bottom: 20px;
+}
+.connect .icon img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+.message {
+  width: 50%;
+  float: left;
+}
+.message h2 {
+  margin-bottom: 20px;
+}
+.message input {
+  margin-bottom: 10px;
+}

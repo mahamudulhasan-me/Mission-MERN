@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+/* =======================================================
+                    Common CSS
+======================================================= */
+.primary-clr {
+  color: #fd6e0a;
+}
+p {
+  font-size: 20px;
+  color: #757575;
+}
+.primary-btn {
+  background-color: #423fae;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 5px;
+}
+/* Header Section Style CSS */
+header {
+  max-width: 1600px;
+  background-color: #fff8f3;
+  background-image: url(../images/developer.png), url(../images/header_bg.png);
+  background-repeat: no-repeat;
+  background-position: left bottom, right bottom;
+}
+/* nab CSS style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 150px 0 150px;
+}
+.nav-title img {
+  width: 200px;
+}
+.nav-title h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 50px;
+  font-size: 20px;
+  color: #474747;
+}
+
+/* Banner Section Style */
+.banner {
+  padding: 0 38px 0 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.name-info h2 {
+  color: #474747;
+  font-weight: 600;
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+.name-info h1 {
+  font-weight: 700;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+.name-info p {
+  margin-bottom: 30px;
+  line-height: 30px;
+}
+.dev-image {
+  margin-bottom: -5px;
+}
+.dev-image img {
+  width: 550px;
+}
+
+.contact-btn {
+  border: 1px solid #423fae;
+  color: #423fae;
+  width: 160px;
+  padding: 12px 23px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 34px;
+}
