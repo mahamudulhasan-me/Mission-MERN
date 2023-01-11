@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      .container {
+        border: 1px dashed red;
+        height: 100vh;
+        margin: 0 auto;
+        font-size: 25px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 10% repeat(4, 1fr);
+        grid-template-rows: 20% 15% 25% auto;
+        gap: 10px;
+      }
+      main {
+        grid-column: span 2;
+        background: rgb(196, 176, 176);
+      }
+      header {
+        background-color: aquamarine;
+        padding: 10px;
+        grid-column: span 4;
+      }
+      nav {
+        background-color: orange;
+        padding: 10px;
+        grid-row: span 4;
+      }
+      .extra2 {
+        background-color: olivedrab;
+        padding: 10px;
+        grid-column: span 1;
+      }
+      .extra1 {
+        background-color: rgb(81, 35, 189);
+        padding: 10px;
+        grid-column: span 1;
+      }
+
+      footer {
+        background-color: aqua;
+        padding: 10px;
+        grid-column: span 3;
+      }
+      .fo-2 {
+        grid-column: span 1;
+        background: rgb(196, 176, 176);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>Nav</nav>
+      <header>Header</header>
+      <div class="extra1">Start-one</div>
+      <div class="extra2">Start-one</div>
+      <div class="extra1">Start-one</div>
+      <div class="extra2">Start-one</div>
+      <main>Main1</main>
+      <main>main2</main>
+      <footer>Footer1</footer>
+      <div class="fo-2">footer 2</div>
+    </div>
+  </body>
+</html>

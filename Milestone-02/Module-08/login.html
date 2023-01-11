@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      .login-form {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        height: 90vh;
+        align-items: center;
+        justify-content: space-around;
+        color: #3f3d56;
+        gap: 10%;
+      }
+      .login-img {
+        width: 50%;
+      }
+      .login-img img {
+        width: 100%;
+      }
+      .login-info {
+        flex-basis: 40%;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 80px 20px 20px;
+        box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
+      }
+      .login-info input {
+        border: none;
+        outline: none;
+        font-size: 18px;
+      }
+      fieldset {
+        margin-bottom: 20px;
+        border-color: #6c63ff;
+      }
+      #login-btn {
+        background-color: #6c63ff;
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #ffff;
+      }
+      p {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 16px;
+        color: #3f3d56;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="login-form">
+        <div class="login-img">
+          <img src="./images/login.svg" alt="" />
+        </div>
+        <form class="login-info">
+          <fieldset>
+            <legend>Email Address</legend>
+            <input type="email" />
+          </fieldset>
+          <fieldset>
+            <legend>Email</legend>
+            <input type="password" name="" id="" />
+          </fieldset>
+          <input type="submit" id="login-btn" value="LOGIN" />
+          <p>
+            <small
+              >Haven't Account?
+              <a href="">Registration Here</a>
+            </small>
+          </p>
+        </form>
+      </div>
+    </header>
+  </body>
+</html>

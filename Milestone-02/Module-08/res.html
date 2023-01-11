@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 20px;
+      }
+      .item {
+        border: 2px solid blue;
+        border-radius: 10px;
+      }
+      .item img {
+        width: 100%;
+      }
+      @media screen and (max-width: 576px) {
+        .items {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="items">
+        <div class="item">
+          <img src="./images/login.svg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ut
+            quam. Consequuntur minus magni nobis!
+          </p>
+        </div>
+        <div class="item">
+          <img src="./images/login.svg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ut
+            quam. Consequuntur minus magni nobis!
+          </p>
+        </div>
+        <div class="item">
+          <img src="./images/login.svg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ut
+            quam. Consequuntur minus magni nobis!
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
