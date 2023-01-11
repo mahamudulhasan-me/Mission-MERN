@@ -8,100 +8,63 @@
     <style>
       .container {
         border: 1px dashed red;
-        width: 70%;
-        height: 50vh;
+        height: 100vh;
         margin: 0 auto;
         font-size: 25px;
         text-align: center;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 10% repeat(4, 1fr);
+        grid-template-rows: 20% 15% 25% auto;
+        gap: 10px;
+      }
+      main {
+        grid-column: span 2;
+        background: rgb(196, 176, 176);
       }
       header {
         background-color: aquamarine;
         padding: 10px;
-        grid-column: span 10;
+        grid-column: span 4;
       }
       nav {
         background-color: orange;
         padding: 10px;
-        grid-column: span 2;
-        grid-row: 1/3;
+        grid-row: span 4;
       }
-      .extra2,
-      main {
+      .extra2 {
         background-color: olivedrab;
         padding: 10px;
-        grid-column: span 10;
+        grid-column: span 1;
       }
-      .extra1,
+      .extra1 {
+        background-color: rgb(81, 35, 189);
+        padding: 10px;
+        grid-column: span 1;
+      }
+
       footer {
         background-color: aqua;
         padding: 10px;
-        grid-column: span 12;
+        grid-column: span 3;
       }
-
-      img {
-        width: 100%;
-      }
-      .product-item {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        border: 1px solid;
-      }
-      @media screen and (max-width: 576px) {
-        .product-item {
-          grid-template-columns: repeat(1, 1fr);
-        }
+      .fo-2 {
+        grid-column: span 1;
+        background: rgb(196, 176, 176);
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <nav>Nav</nav>
       <header>Header</header>
-      <nav>Menu</nav>
-      <!-- <div class="extra1">Extra1</div>
-      <div class="extra2">Extra2</div> -->
-      <main>Content</main>
-      <footer>Footer</footer>
-    </div>
-    <div class="product-item">
-      <div class="item">
-        <img src="./images/login.svg" alt="" />
-        <h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dolor.
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          soluta aspernatur numquam ratione dolor quisquam adipisci quasi dicta
-          est consectetur!
-        </p>
-        <button>Add item</button>
-      </div>
-      <div class="item">
-        <img src="./images/login.svg" alt="" />
-        <h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dolor.
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          soluta aspernatur numquam ratione dolor quisquam adipisci quasi dicta
-          est consectetur!
-        </p>
-        <button>Add item</button>
-      </div>
-      <div class="item">
-        <img src="./images/login.svg" alt="" />
-        <h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dolor.
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          soluta aspernatur numquam ratione dolor quisquam adipisci quasi dicta
-          est consectetur!
-        </p>
-        <button>Add item</button>
-      </div>
+      <div class="extra1">Start-one</div>
+      <div class="extra2">Start-one</div>
+      <div class="extra1">Start-one</div>
+      <div class="extra2">Start-one</div>
+      <main>Main1</main>
+      <main>main2</main>
+      <footer>Footer1</footer>
+      <div class="fo-2">footer 2</div>
     </div>
   </body>
 </html>
