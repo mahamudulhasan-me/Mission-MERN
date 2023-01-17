@@ -5,6 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gets Bootstrap</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>Bootstrap Table</h1>
+    <table
+      class="table table-bordered text-center border-danger table-dark table-hover"
+    >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th>1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+    <figure class="figure img-thumbnail">
+      <img src="./images/nature.jpg" />
+      <figcaption class="figure-caption text-end">
+        This is nature pic
+      </figcaption>
+    </figure>
+    <!-- Bootstrap Main JS -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
 </html>
