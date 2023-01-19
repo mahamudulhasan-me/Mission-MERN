@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convention Center</title>
+    <!-- Bootstrap Main CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand display-2 font-bold" href="#"
+            ><h4>Abacus Convention Center</h4></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="banner-section">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/banner.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="display-3">The perfect venue for your next event</h4>
+                <p class="w-50 mx-auto">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit
+                </p>
+                <button class="btn btn-secondary text-info mb-5">
+                  Book Now
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img src="./images/banner.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="display-3">The perfect venue for your next event</h4>
+                <p class="w-50 mx-auto">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit
+                </p>
+                <button class="btn btn-secondary text-info mb-5">
+                  Book Now
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img src="./images/banner.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h4 class="display-3">The perfect venue for your next event</h4>
+                <p class="w-50 mx-auto">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit
+                </p>
+                <button class="btn btn-secondary text-info mb-5">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="weeding-section my-5">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-4 col-lg-6 col-sm-12">
+            <img src="./images/wedding.png" alt="" />
+          </div>
+          <div class="col-lg-4 col-lg-6 col-sm12">
+            <h4 class="dispaly-2">Every moment is Precious</h4>
+            <p class="mb-4">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+            <button class="btn btn-primary">
+              Explore Our Album
+              <img src="./images/icons/arrow-forward 1.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="package-section my-5">
+      <div class="container">
+        <div class="row">
+          <h2 class="col-lg-12 text-center mb-5 mt-5">Our Package</h2>
+          <div class="col-lg-3 col-md-4 col-sm-12 p-3">
+            <h1>$300</h1>
+            <h3>Business Fair</h3>
+            <p>For most businesses event like book fair, craft fair.</p>
+            <ul>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />limited space access
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Secuirty facility
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />event support
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Decoration design
+              </li>
+              <li>
+                <img class="img-fluid me-2" src="./images/icons/check.png" />Per
+                day bill
+              </li>
+            </ul>
+            <button class="btnn primary-btn">Choose Plan</button>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 p-3">
+            <h1>$300</h1>
+            <h3>Business Fair</h3>
+            <p>For most businesses event like book fair, craft fair.</p>
+            <ul>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />limited space access
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Secuirty facility
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />event support
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Decoration design
+              </li>
+              <li>
+                <img class="img-fluid me-2" src="./images/icons/check.png" />Per
+                day bill
+              </li>
+            </ul>
+            <button class="btnn primary-btn">Choose Plan</button>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-sm-12 p-3 bg-primary rounded text-light position-relative"
+          >
+            <h1 class="text-light">$300</h1>
+            <h3 class="text-light">Business Fair</h3>
+            <p>For most businesses event like book fair, craft fair.</p>
+            <ul>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />limited space access
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Secuirty facility
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />event support
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Decoration design
+              </li>
+              <li>
+                <img class="img-fluid me-2" src="./images/icons/check.png" />Per
+                day bill
+              </li>
+            </ul>
+            <div class="hot-btn">Hot</div>
+            <button class="btnn secondary-btn">Choose Plan</button>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 p-3">
+            <h1>$300</h1>
+            <h3>Business Fair</h3>
+            <p>For most businesses event like book fair, craft fair.</p>
+            <ul>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />limited space access
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Secuirty facility
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />event support
+              </li>
+              <li>
+                <img
+                  class="img-fluid me-2"
+                  src="./images/icons/check.png"
+                />Decoration design
+              </li>
+              <li>
+                <img class="img-fluid me-2" src="./images/icons/check.png" />Per
+                day bill
+              </li>
+            </ul>
+            <button class="btnn primary-btn">Choose Plan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center" style="gap: 20px">
+            <h1>Our Happy Client Says</h1>
+          </div>
+          <div class="testi-item">
+            <div class="col-lg-3 col-md-4 col-sm-12 text-center shadow-lg p-3">
+              <p>
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <img class="img-fluid mb-4" src="./images/person 1.png" alt="" />
+              <h6>Regina Miles</h6>
+              <p>Banker</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12 text-center shadow-lg p-3">
+              <p>
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <img class="img-fluid mb-4" src="./images/person 2.png" alt="" />
+              <h6>Regina Miles</h6>
+              <p>Banker</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12 text-center shadow-lg p-3">
+              <p>
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <img class="img-fluid mb-4" src="./images/person 3.png" alt="" />
+              <h6>Regina Miles</h6>
+              <p>Banker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="question-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h1>Frequently Asked Questions</h1>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the first item's accordion body.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the second item's accordion body. Let's imagine this being
+                    filled with some actual content.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFive"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <img class="img-fluid" src="./images/people.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h5 class="dispaly-5">© 2020 bike. All rights reserved</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 app-store">
+            <h5>Get the App</h5>
+            <div class="d-flex flex-lg-colum">
+              <img src="./images/icons/play.png" alt="" />
+              <img src="./images/icons/app.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Main JS -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>

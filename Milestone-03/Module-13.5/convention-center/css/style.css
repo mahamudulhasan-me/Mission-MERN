@@ -1,0 +1,63 @@
+header {
+  background-color: #fff;
+}
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.package-section h1,
+h3 {
+  color: #231d4f;
+  font-weight: 700;
+}
+.btnn {
+  width: 70%;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px auto !important;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.primary-btn {
+  background-color: #f496d223;
+  color: #3f87f5;
+}
+.secondary-btn {
+  background-color: #fff;
+}
+.hot-btn {
+  position: absolute;
+  top: -18px;
+  right: 18px;
+  background-color: red;
+  padding: 8px 16px;
+  border-radius: 25%;
+  font-weight: 600;
+}
+section {
+  margin: 100px auto 100px;
+}
+p {
+  color: #6c6c6c;
+}
+.testi-item {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 60px;
+}
+.question-section button {
+  font-weight: 600;
+  font-size: 18px;
+}
+footer {
+  background: #0b0d17;
+  color: #fff;
+  height: 30vh;
+}
+.app-store img {
+  width: 130px;
+}
