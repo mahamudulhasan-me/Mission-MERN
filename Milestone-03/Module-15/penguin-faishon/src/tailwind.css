@@ -7,13 +7,27 @@
     @apply w-full h-auto;
   }
   section {
-    @apply my-32;
+    @apply my-28;
   }
   h2,
   h3 {
     @apply text-secondary;
   }
   p {
-    @apply text-p font-semibold;
+    @apply text-p;
+  }
+  ul li {
+    @apply hover:text-primary;
+  }
+}
+@layer components {
+  .btn {
+    @apply bg-gradient-to-b from-[#A4BC46] to-[#85A019] px-7 py-4 rounded-lg text-white font-bold hover:bg-gradient-to-t;
+  }
+  .btn2 {
+    @apply bg-gradient-to-b from-[#A4BC46] to-[#85A019] px-5 py-3 rounded-lg text-white font-bold hover:bg-gradient-to-t;
+  }
+  .title {
+    @apply md:text-5xl text-3xl font-bold uppercase mb-7 border-l-4 pl-3 border-l-primary;
   }
 }

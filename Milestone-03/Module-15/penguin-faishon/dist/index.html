@@ -9,14 +9,16 @@
   </head>
   <body>
     <!-- Header Section Start -->
-    <header class="py-8 bg-[#FFFBF0]">
+    <header class="h-screen py-8 bg-[#FFFBF0]">
       <!-- Nav Section Start  -->
-      <nav class="w-4/5 flex justify-between items-center mx-auto">
-        <div class="logo h-10 w-1/3">
+      <nav
+        class="w-4/5 flex md:flex-row gap-5 md:justify-between md:items-center mx-auto"
+      >
+        <div class="logo h-10 md:w-1/3 w-3/4">
           <a href="#"><img src="../images/logo.png" alt="" /></a>
         </div>
         <div class="menu">
-          <ul class="flex gap-4 text-p font-semibold">
+          <ul class="md:flex md:flex-row flex-col gap-4 text-p font-semibold">
             <li><a href="#">Home</a></li>
             <li><a href="#">Product</a></li>
             <li><a href="#">About Us</a></li>
@@ -26,17 +28,24 @@
       </nav>
       <!-- Banner Section Start  -->
       <div
-        class="w-4/5 mx-auto banner_section flex justify-between items-center"
+        class="w-4/5 mx-auto banner_section md:flex justify-between items-center mt-8"
       >
-        <div class="banner-title">
-          <h1 class="text-6xl font-bold text-primary uppercase">
+        <div class="banner-title md:mb-0 mb-5">
+          <h1 class="md:text-6xl text-4xl font-bold text-primary uppercase">
             Be the Penguins <br /><span class="text-secondary">of Winter</span>
           </h1>
-          <p class="w-3/4 mt-3 mb-5">
+          <p class="md:w-3/4 mt-3 mb-10 font-semibold">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
-          <a href="#">Buy Now</a>
+          <a href="#" class="btn">
+            <img
+              class="w-6 h-6 inline"
+              src="../images/icons/shopping-cart 1.png"
+              alt=""
+            />
+            Buy Now</a
+          >
         </div>
         <div class="banner-image">
           <img src="../images/model.png" alt="" />
@@ -44,5 +53,164 @@
       </div>
     </header>
     <!-- Header Section End -->
+    <!-- Main Section Start  -->
+    <main>
+      <!-- woman jacket Section  -->
+      <section class="woman_jacket w-4/5 mx-auto">
+        <div class="title">
+          <h2>Woman Jacket</h2>
+        </div>
+        <div class="jacket-showcase grid md:grid-cols-3 gap-5">
+          <div class="jacket-item p-5 rounded-2xl shadow-lg">
+            <img
+              class="bg-[#F1F1F1] rounded-2xl p-4"
+              src="../images/jacket-1.png"
+              alt=""
+            />
+            <h3 class="text-2xl font-bold py-5">Yellow Coat Jacket</h3>
+            <p class="mb-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="item-footer flex justify-between items-center">
+              <h1 class="font-bold text-3xl text-primary">$234</h1>
+              <a href="#" class="btn2">
+                <img
+                  class="w-6 h-6 inline"
+                  src="../images/icons/shopping-cart 1.png"
+                  alt=""
+                />
+                Buy Now</a
+              >
+            </div>
+          </div>
+          <div class="jacket-item p-5 rounded-2xl shadow-lg">
+            <img
+              class="bg-[#F1F1F1] rounded-2xl p-4"
+              src="../images/jacket-2.png"
+              alt=""
+            />
+            <h3 class="text-2xl font-bold py-5">Ladies Jacket</h3>
+            <p class="mb-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="item-footer flex justify-between items-center">
+              <h1 class="font-bold text-3xl text-primary">$234</h1>
+              <a href="#" class="btn2">
+                <img
+                  class="w-6 h-6 inline"
+                  src="../images/icons/shopping-cart 1.png"
+                  alt=""
+                />
+                Buy Now</a
+              >
+            </div>
+          </div>
+          <div class="jacket-item p-5 rounded-2xl shadow-lg">
+            <img
+              class="bg-[#F1F1F1] rounded-2xl p-4"
+              src="../images/jacket-3.png"
+              alt=""
+            />
+            <h3 class="text-2xl font-bold py-5">Woman Leather Jacket</h3>
+            <p class="mb-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="item-footer flex justify-between items-center">
+              <h1 class="font-bold text-3xl text-primary">$234</h1>
+              <a href="#" class="btn2">
+                <img
+                  class="w-6 h-6 inline"
+                  src="../images/icons/shopping-cart 1.png"
+                  alt=""
+                />
+                Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- man jacket section  -->
+      <section class="woman_jacket w-4/5 mx-auto">
+        <div class="title">
+          <h2>Man Jacket</h2>
+        </div>
+        <div class="jacket-showcase grid md:grid-cols-3 gap-5">
+          <div class="jacket-item p-5 rounded-2xl shadow-lg">
+            <img
+              class="bg-[#F1F1F1] rounded-2xl p-4"
+              src="../images/jacket-4.png"
+              alt=""
+            />
+            <h3 class="text-2xl font-bold py-5">Yellow Coat Jacket</h3>
+            <p class="mb-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="item-footer flex justify-between items-center">
+              <h1 class="font-bold text-3xl text-primary">$234</h1>
+              <a href="#" class="btn2">
+                <img
+                  class="w-6 h-6 inline"
+                  src="../images/icons/shopping-cart 1.png"
+                  alt=""
+                />
+                Buy Now</a
+              >
+            </div>
+          </div>
+          <div class="jacket-item p-5 rounded-2xl shadow-lg">
+            <img
+              class="bg-[#F1F1F1] rounded-2xl p-4"
+              src="../images/jacket-5.png"
+              alt=""
+            />
+            <h3 class="text-2xl font-bold py-5">Ladies Jacket</h3>
+            <p class="mb-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="item-footer flex justify-between items-center">
+              <h1 class="font-bold text-3xl text-primary">$234</h1>
+              <a href="#" class="btn2">
+                <img
+                  class="w-6 h-6 inline"
+                  src="../images/icons/shopping-cart 1.png"
+                  alt=""
+                />
+                Buy Now</a
+              >
+            </div>
+          </div>
+          <div class="jacket-item p-5 rounded-2xl shadow-lg">
+            <img
+              class="bg-[#F1F1F1] rounded-2xl p-4"
+              src="../images/jacket-6.png"
+              alt=""
+            />
+            <h3 class="text-2xl font-bold py-5">Woman Leather Jacket</h3>
+            <p class="mb-5">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="item-footer flex justify-between items-center">
+              <h1 class="font-bold text-3xl text-primary">$234</h1>
+              <a href="#" class="btn2">
+                <img
+                  class="w-6 h-6 inline"
+                  src="../images/icons/shopping-cart 1.png"
+                  alt=""
+                />
+                Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Main Section End  -->
+    <main></main>
   </body>
 </html>
