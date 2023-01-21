@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    @apply w-full h-auto;
+  }
+  section {
+    @apply my-32;
+  }
+  h2,
+  h3 {
+    @apply text-secondary;
+  }
+  p {
+    @apply text-p font-semibold;
+  }
+}

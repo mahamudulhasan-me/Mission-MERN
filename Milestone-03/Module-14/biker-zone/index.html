@@ -7,14 +7,15 @@
     <title>Biker-Zone</title>
     <!-- Bootstrap Main CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- Header Section Start -->
     <header>
       <!-- Nav Section Start -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+          <a class="navbar-brand" href="#"><h3>Bike Dekho</h3></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -27,51 +28,182 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
+                <a class="nav-link" href="#">Shop</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li>
+                <button class="btn btn-primary px-4 fw-bold">Login</button>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
+      <!-- Banner Section Start  -->
+      <section class="banner_section container">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                  <h1 class="fw-bold">Ride-on R15 V4 with Smile</h1>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn btn-primary px-4 mt-3">Purchase</button>
+                </div>
+                <div class="col-12 col-md-6">
+                  <img
+                    src="./images/bike-5.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                  <h1>Ride-on R15 V4 with Smile</h1>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn btn-primary px-4 mt-3">Purchase</button>
+                </div>
+                <div class="col-12 col-md-6">
+                  <img
+                    src="./images/bike-6.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                  <h1>Ride-on R15 V4 with Smile</h1>
+                  <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit.
+                  </p>
+                  <button class="btn btn-primary px-4 mt-3">Purchase</button>
+                </div>
+                <div class="col-12 col-md-6">
+                  <img
+                    src="./images/bike-8.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
     </header>
+    <main>
+      <section class="hotbike_sectiion container">
+        <div class="section-title text-center mb-4">
+          <h1 class="fw-bold">Featured Bikes In This Year</h1>
+          <p class="text-primary">Best bike collection</p>
+          <hr class="w-25 mx-auto" />
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">
+            <img class="px-4 py-2" src="./images/feature-bike.jpg" alt="" />
+          </div>
+          <div class="col">
+            <img class="px-4 py-2" src="./images/feature-bike.jpg" alt="" />
+          </div>
+          <div class="col">
+            <img class="px-4 py-2" src="./images/feature-bike.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="latest_news container">
+        <div class="section-title text-center mb-4">
+          <h1 class="fw-bold">Latest News In This Year</h1>
+          <p class="text-primary">Latest News collection</p>
+          <hr class="w-25 mx-auto" />
+        </div>
+        <div class="card-group d-flex justify-content-center">
+          <div class="row row-col-1 row-col-sm-2 row-col-lg-3">
+            <div class="col">
+              <div class="card mx-auto rounded-4 p-2" style="width: 20rem">
+                <img src="./images/bike-1.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mx-auto rounded-4 p-2" style="width: 20rem">
+                <img src="./images/bike-2.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mx-auto rounded-4 p-2" style="width: 20rem">
+                <img src="./images/bike-3.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Bootstrap Main JS -->
     <script src="./js/bootstrap.min.js"></script>
   </body>

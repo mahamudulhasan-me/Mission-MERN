@@ -1,0 +1,21 @@
+ul li {
+  margin-left: 18px;
+}
+section {
+  margin-bottom: 130px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.carousel {
+  background-color: rgba(231, 111, 81, 0.1);
+}
+.carousel-inner {
+  padding: 50px 80px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #e76f51;
+  padding: 2px;
+}
