@@ -598,6 +598,14 @@ ul li:hover {
   }
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -617,6 +625,14 @@ ul li:hover {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .inline {
@@ -643,6 +659,10 @@ ul li:hover {
   height: 1.5rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .w-4\/5 {
   width: 80%;
 }
@@ -655,12 +675,44 @@ ul li:hover {
   width: 1.5rem;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.grid-cols-\[1fr_1\.3fr\] {
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.grid-cols-\[1fr_1\.1fr\] {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.grid-cols-\[1fr_1\.2fr\] {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -673,6 +725,10 @@ ul li:hover {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded-2xl {
@@ -705,6 +761,11 @@ ul li:hover {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .text-4xl {
@@ -755,6 +816,12 @@ ul li:hover {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 @media (min-width: 768px) {
   .md\:mb-0 {
     margin-bottom: 0px;
@@ -776,6 +843,10 @@ ul li:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-\[1fr_1\.2fr\] {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -791,5 +862,15 @@ ul li:hover {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
   }
 }
