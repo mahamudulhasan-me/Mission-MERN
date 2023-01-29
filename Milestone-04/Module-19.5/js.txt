@@ -1,0 +1,4 @@
+1. What is Javascript?
+Ans: Javascript is a programming language that is primarily used to create interactive and dynamic  features on web pages. It is a client side scripting language as well as a server side scripting language.
+2. What does work JS?
+Ans: JS is a single threaded and single concurrent programming language which means it can handle one task at a time or, in other words, a piece of code at a time. It's an interpreted programming language, and like most scripting languages, it uses dynamic typing, where type safety is verified at the runtime.

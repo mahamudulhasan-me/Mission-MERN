@@ -1,0 +1,51 @@
+What is variable in JS?
+Ans :
+ In JavaScript, a variable is a way to store a value or a reference to an object that can be changed during the execution of a program. The value stored in a variable can be of different types, such as a number, a string, or an object, and the type of a variable determines the operations that can be performed on it.
+ JavaScript variables are declared using the keyword "var", "let" or "const".
+
+The "var" keyword is used to declare variables that are accessible within the entire scope of the program, including the global scope.
+
+The "let" keyword is used to declare variables that are block-scoped, meaning they are only accessible within the block of code in which they are defined.
+
+The "const" keyword is used to declare variables that cannot be reassigned after they are declared.
+
+For example:
+let x = 5; // declares a variable x and assigns it the value of 5
+const y = "hello"; // declares a variable y and assigns it the value of "hello"
+var z = true; // declares a variable z and assigns it the value of true
+It's recommended to use "let" and "const" instead of "var" as they are more flexible and safer than "var"
+
+2. How can change or update value of the variable?
+Ans: In JavaScript, you can change the value of a variable by assigning a new value to it. This is done using the assignment operator (=).
+
+For example:
+let x = 5; // declares a variable x and assigns it the value of 5
+x = 10; // assigns the value of 10 to the variable x
+console.log(x); // prints 10
+You can also change the value of a variable by using the various mathematical and assignment operators like "+=", "-=", "*=", "/=", "%=".
+
+For example:
+
+javascript
+Copy code
+let x = 5;
+x += 3; // x = x + 3;
+console.log(x); // prints 8
+x *= 2; // x = x * 2;
+console.log(x); // prints 16
+If you declared a variable using "const", you can't reassign it but you can modify the properties of an object or array that the variable points to.
+
+javascript
+Copy code
+const person = {name: "John", age: 25};
+person.age = 30;
+console.log(person); // prints {name: "John", age: 30}
+It's important to keep in mind that JavaScript is a dynamically typed language, so you can reassign a variable to hold a value of a different type.
+
+javascript
+Copy code
+let x = 5;
+x = "hello"; // x now holds a string value
+console.log(x); // prints "hello"
+Also, keep in mind that if you are reassigning a variable inside a block that has already been defined with the same name, it will only affect the local scope of the block and not the global one.
+
