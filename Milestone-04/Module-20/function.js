@@ -1,12 +1,16 @@
 // function declaration
 function bringSingara(taka) {
-  console.log("mama singra den!");
-  console.log("koto takar singra niben?");
-  console.log("amake " + taka + "r singra den");
+  let price = 10;
+  let quantity = taka / price;
+  return quantity;
 }
+let myMoney = 90;
+let result = bringSingara(myMoney);
+console.log("You deserve ", result, "pics singara");
 
 function sumTwoNumber(num1, num2) {
-  console.log("Summation of", num1, num2);
-  console.log("Sum: ", num1 + num2);
+  var result = num1 + num2;
+  return result;
 }
-sumTwoNumber(36, 69);
+let summation = sumTwoNumber(10, 20);
+console.log("Simmation:", summation);
