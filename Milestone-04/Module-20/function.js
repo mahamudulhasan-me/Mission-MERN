@@ -13,4 +13,4 @@ function sumTwoNumber(num1, num2) {
   return result;
 }
 let summation = sumTwoNumber(10, 20);
-console.log("Simmation:", summation);
+console.log("Summation:", summation);
