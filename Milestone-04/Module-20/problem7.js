@@ -6,6 +6,6 @@ function square(num) {
   let square = num * num;
   return square;
 }
-const myNum = 5;
+const myNum = 6;
 const result = square(myNum);
-console.log(result);
+console.log("Square of", myNum, "is:", result);
