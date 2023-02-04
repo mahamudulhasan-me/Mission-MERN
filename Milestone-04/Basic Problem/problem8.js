@@ -3,10 +3,9 @@
 // ফাইল নেম (যেমনঃ ‘index.js’)। যদি এটি জাভাস্ক্রিপ্ট ফাইল হয় তোমাকে true রিটার্ন করতে হবে আর যদি না হয়
 // তাহলে false রিটার্ন করতে হবে ।
 function isJavaScriptFile(files) {
-  if (files.includes(".js")) {
-    return true;
-  } else {
-    return false;
-  }
+  return files.endsWith(".js");
 }
-console.log(isJavaScriptFile("problem.py"));
+console.log(isJavaScriptFile("app.js"));
+console.log(isJavaScriptFile("js.png"));
+console.log(isJavaScriptFile("image.js.png"));
+console.log(isJavaScriptFile("image.jpg.js"));
