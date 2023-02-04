@@ -5,14 +5,24 @@
 
 // আউটপুটঃ 3
 const myArray = [-1, 2, -3, 4, 5, 6, -7, 8, -9, 10];
-function filterUp5(arrays) {
-  let store = [];
-  for (const number of arrays) {
+// function filterUp5(arrays) {
+//   let store = [];
+//   for (const number of arrays) {
+//     if (number > 5) {
+//       store.push(number);
+//     }
+//   }
+//   return store.length;
+// }
+// const myResult = filterUp5(myArray);
+// console.log(myResult);
+function greaterThenFive(numbers) {
+  let counter = 0;
+  for (const number of numbers) {
     if (number > 5) {
-      store.push(number);
+      counter++;
     }
   }
-  return store.length;
+  return counter;
 }
-const myResult = filterUp5(myArray);
-console.log(myResult);
+console.log(greaterThenFive(myArray));
