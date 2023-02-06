@@ -1,15 +1,8 @@
 // Problem 1: Let’s play a mind game
-// তোমাকে একটা function দেওয়া হবে called “mindGame()” যা ইনপুট হিসেবে একটা positive number নিবে।
-
-// এখন তোমার task : তোমাকে সেই নাম্বার এর সাথে 3 গুন করে, তারপর 10 যোগ করে, তারপর 2 দিয়ে ভাগ করে,
-//  তারপর 5 বিয়োগ করে, যা আউটপুট আসবে তা return করতে হবে।
 function mindGame(num) {
-  let multiTask = num * 3;
-  let addTask = multiTask + 10;
-  let divTask = multiTask / 2;
-  return (subTask = multiTask - 5);
+  return (num * 3 + 10) / 2 - 5;
 }
-console.log(mindGame(-33));
+console.log(mindGame(33));
 // Problem 2: Finding even or odd
 function evenOdd(str) {
   if (typeof str === "string") {
@@ -33,6 +26,7 @@ function isLGSeven(num) {
   }
   return "Oops! Please Give Any Number.";
 }
+console.log(isLGSeven(-15));
 
 // Problem 4: Finding Bad data
 function findingBadData(numbersArray) {
