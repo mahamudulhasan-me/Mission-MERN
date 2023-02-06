@@ -19,3 +19,8 @@ function smallestPerson(persons) {
   return youngBoy.name;
 }
 console.log(smallestPerson(myArray));
+myArray.sort(function (a, b) {
+  let result = a.age - b.age;
+  return result;
+});
+console.log(myArray);
