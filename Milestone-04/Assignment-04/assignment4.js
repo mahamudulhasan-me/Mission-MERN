@@ -1,9 +1,17 @@
-// Problem 1: Let’s play a mind game
-function mindGame(num) {
-  return (num * 3 + 10) / 2 - 5;
+/* -----------------------------------------------
+Problem 1: Let’s play a mind game
+----------------------------------------------- */
+function mindGame(number) {
+  if (number < 0) {
+    // arithmetic operation of a given number
+    return (number * 3 + 10) / 2 - 5;
+  }
+  return "Oops! Please Give a Positive Number.";
 }
-console.log(mindGame(33));
-// Problem 2: Finding even or odd
+
+/* -----------------------------------------------
+Problem 2: Finding even or odd
+----------------------------------------------- */
 function evenOdd(str) {
   if (typeof str === "string") {
     if (str.length % 2 === 0) {
@@ -15,7 +23,9 @@ function evenOdd(str) {
   return "Oops! Please Give a String Input.";
 }
 
-// Problem 3: Is Less or Greater than seven
+/* -----------------------------------------------
+Problem 3: Is Less or Greater than seven
+----------------------------------------------- */
 function isLGSeven(num) {
   if (typeof num === "number") {
     let absoluteDiff = num - 7;
@@ -26,13 +36,14 @@ function isLGSeven(num) {
   }
   return "Oops! Please Give Any Number.";
 }
-console.log(isLGSeven(-15));
 
-// Problem 4: Finding Bad data
+/* -----------------------------------------------
+Problem 4: Finding Bad data
+----------------------------------------------- */
 function findingBadData(numbersArray) {
   if (Array.isArray(numbersArray)) {
     let badDataCounter = 0;
-    arrayLen = numbersArray.length;
+    const arrayLen = numbersArray.length;
     for (let i = 0; i < arrayLen; i++) {
       if (numbersArray[i] < 0) {
         badDataCounter++;
@@ -42,7 +53,9 @@ function findingBadData(numbersArray) {
   }
   return "Oops! Please Give An Array.";
 }
-// Problem 5: Convert your gems into diamond
+/* -----------------------------------------------
+Problem 5: Convert your gems into diamond
+----------------------------------------------- */
 function gemsToDiamond(firstFrndGems, secondFrndGems, thirdFrndGems) {
   if (
     typeof firstFrndGems === "number" &&
@@ -60,5 +73,5 @@ function gemsToDiamond(firstFrndGems, secondFrndGems, thirdFrndGems) {
     }
     return totalDiamonds;
   }
-  return "Oops! Please Give a Valid Number.";
+  return "Oops! Please Give a Valid Three Number.";
 }
