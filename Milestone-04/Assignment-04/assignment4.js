@@ -1,8 +1,11 @@
 /* -----------------------------------------------
 Problem 1: Let’s play a mind game
+---------------------------------
+This program will take a positive number as an argument and return the result after the arithmetic
+operation and return an error message if anything other than a positive number is given.
 ----------------------------------------------- */
 function mindGame(number) {
-  if (number < 0) {
+  if (number >= 0 && typeof number === "number") {
     // arithmetic operation of a given number
     return (number * 3 + 10) / 2 - 5;
   }
