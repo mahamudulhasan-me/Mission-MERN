@@ -14,13 +14,17 @@ function mindGame(number) {
 
 /* -----------------------------------------------
 Problem 2: Finding even or odd
+------------------------------
+This program will take a string data as an argument and return "Even" if length of this string
+as even  and "Odd" if the length is odd. Any data other than string will return an error message.
 ----------------------------------------------- */
 function evenOdd(str) {
   if (typeof str === "string") {
+    // Checking string length
     if (str.length % 2 === 0) {
-      return "Even";
+      return "even";
     }
-    return "Odd";
+    return "odd";
   }
   //If the input is not a string, it will return
   return "Oops! Please Give a String Input.";
@@ -28,6 +32,9 @@ function evenOdd(str) {
 
 /* -----------------------------------------------
 Problem 3: Is Less or Greater than seven
+----------------------------------------
+This program will take a number as an argument, if this number is less than seven after subtracting
+it from seven, it will return the subtraction result. Otherwise, it will return the double of the input.
 ----------------------------------------------- */
 function isLGSeven(num) {
   if (typeof num === "number") {
@@ -35,13 +42,17 @@ function isLGSeven(num) {
     if (absoluteDiff < 7) {
       return absoluteDiff;
     }
-    return absoluteDiff * 2;
+    return num * 2;
   }
+  //If the input is not a number, it will return
   return "Oops! Please Give Any Number.";
 }
 
 /* -----------------------------------------------
 Problem 4: Finding Bad data
+---------------------------
+This program will take an array of numbers as an argument, it will return all the bad data in this array,
+i.e. the numbers below zero. Any input other than array will return an error message.
 ----------------------------------------------- */
 function findingBadData(numbersArray) {
   if (Array.isArray(numbersArray)) {
@@ -56,6 +67,7 @@ function findingBadData(numbersArray) {
   }
   return "Oops! Please Give An Array.";
 }
+
 /* -----------------------------------------------
 Problem 5: Convert your gems into diamond
 ----------------------------------------------- */
