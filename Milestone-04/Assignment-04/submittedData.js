@@ -11,13 +11,12 @@ function mindGame(positiveNum) {
   }
   return "Please Give a Positive Number.";
 }
-
 /* -----------------------------------------------
-Problem 2: Finding even or odd
-------------------------------
-This function will take a string data as an argument and return "Even" if length of this string
-as even  and "Odd" if the length is odd. Any data other than string will return an error message.
------------------------------------------------ */
+    Problem 2: Finding even or odd
+    ------------------------------
+    This function will take string data as an argument and return "Even" if the length of this string
+    is even and "Odd" if the length is odd. Any data other than string will return an error message.
+    ----------------------------------------------- */
 function evenOdd(strData) {
   if (typeof strData === "string") {
     // Checking string length
@@ -31,11 +30,11 @@ function evenOdd(strData) {
 }
 
 /* -----------------------------------------------
-Problem 3: Is Less or Greater than seven
-----------------------------------------
-This function will take a number as an argument, if this number is less than seven after subtracting
-it from seven, it will return the subtraction result. Otherwise, it will return the double of the input.
------------------------------------------------ */
+    Problem 3: Is Less or Greater than seven
+    ----------------------------------------
+    This function will take a number as an argument, if this number is less than seven after subtracting
+    it from seven, it will return the subtraction result. Otherwise, it will return double the input.
+    ----------------------------------------------- */
 function isLGSeven(number) {
   if (typeof number === "number") {
     let absoluteDiff = number - 7;
@@ -49,11 +48,11 @@ function isLGSeven(number) {
 }
 
 /* -----------------------------------------------
-Problem 4: Finding Bad data
----------------------------
-This function will take an array of numbers as an argument, it will return all the bad data 
-in this array, i.e. the numbers below zero. Any input other than array will return an error message.
------------------------------------------------ */
+    Problem 4: Finding Bad data
+    ---------------------------
+    This function will take an array of numbers as an argument, it will return all the bad data
+    in this array, i.e. the numbers below zero. Any input other than the array will return an error message.
+    ----------------------------------------------- */
 function findingBadData(numbersArray) {
   if (Array.isArray(numbersArray)) {
     let badDataCounter = 0;
@@ -71,12 +70,12 @@ function findingBadData(numbersArray) {
 }
 
 /* -----------------------------------------------
-Problem 5: Convert your gems into diamond
------------------------------------------
-This function will take the number of gems of three friends as argument and convert the gems to diamonds 
-by multiplying them by 21, 32 and 43 respectively. If the number of total diamonds is greater than 2000
-then 2000 will be subtracted from the total diamonds and the remaining diamonds will be returned.
------------------------------------------------ */
+    Problem 5: Convert your gems into diamond
+    -----------------------------------------
+    This function will take the number of gems of three friends as an argument and convert the gems to diamonds
+    by multiplying them by 21, 32, and 43 respectively. If the number of total diamonds is greater than 2000
+    then 2000 will be subtracted from the total diamonds and the remaining diamonds will be returned.
+    ----------------------------------------------- */
 function gemsToDiamond(firstFriendGems, secondFriendGems, thirdFriendGems) {
   if (
     typeof firstFriendGems === "number" &&
