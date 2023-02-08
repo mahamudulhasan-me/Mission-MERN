@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom|Document Object Model</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Wellcome to DOM Tutorial</h2>
+    <h2>Hey bro How are your</h2>
+    <h3><strong>Dom Full Meaning</strong></h3>
+    <ul>
+      <li>D-Document</li>
+      <li>O-Object</li>
+      <li>M-Model</li>
+    </ul>
+    <section>
+      <h2 id="place-title">Where I like to visit</h2>
+      <ul>
+        <li class="place-item">Cox's Bazar</li>
+        <li class="place-item">Cox's Bazar</li>
+        <li class="place-item">Bandorbon</li>
+        <li class="place-item">Sundarbon</li>
+        <li>Katabon</li>
+      </ul>
+    </section>
+    <script>
+      const liCollection = document.getElementsByTagName("li");
+      //   console.log(liCollection);
+      for (const li of liCollection) {
+        // console.log(li.innerText);
+      }
+      const heading = document.getElementsByTagName("h2");
+      for (const h2 of heading) {
+        // console.log(h2.innerText);
+      }
+      const placeTitle = document.getElementById("place-title");
+      console.log(placeTitle.innerText);
+      const placeItems = document.getElementsByClassName("place-item");
+      console.log(placeItems);
+      for (const place of placeItems) {
+        console.log(place.innerText);
+      }
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
