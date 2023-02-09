@@ -23,3 +23,12 @@ document
   .addEventListener("mouseover", function () {
     document.body.style.backgroundColor = "tomato";
   });
+
+const sendBtn = document.getElementById("send");
+const data = document.getElementById("data");
+sendBtn.addEventListener("click", getData);
+const p = document.getElementById("p");
+function getData() {
+  p.innerText = data.value;
+  data.value = "";
+}
