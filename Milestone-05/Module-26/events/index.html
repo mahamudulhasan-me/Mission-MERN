@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events</title>
+  </head>
+  <body>
+    <h1>Today We will Explore DOM Events</h1>
+    <button onclick="console.log(`i'm clicked`)">Click Me!</button>
+    <!-- one way  -->
+    <button onclick="document.body.style.backgroundColor='green'">
+      Make Green
+    </button>
+    <!-- second way  -->
+    <button onclick="makeRed()">Make red</button>
+    <!-- by add event listener  -->
+    <button id="make-orange">Make Orange</button>
+
+    <section style="width: 50%; height: 300px; margin: 0 auto">
+      <!-- third way  -->
+      <button id="make-blue">Make Blue</button>
+      <div id="inner" style="width: 50%; height: 150px; margin: 0 auto"></div>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
