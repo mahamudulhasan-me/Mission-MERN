@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  flex-direction: column;
+  height: 98vh;
+}
+h1 {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  margin-bottom: 2rem;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}

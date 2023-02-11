@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="todo-header">
+        <img src="./img/img.png" alt="" />
+        <h1>ToDo App</h1>
+      </div>
+      <div class="input-field">
+        <h2>Add New Task</h2>
+        <form>
+          <input type="text" id="task-value" />
+          <input type="submit" id="btn-submit" value="submit" />
+        </form>
+      </div>
+      <div class="todo-progress">
+        <div class="incomplete-task">
+          <h1>Incomplete Task</h1>
+          <hr />
+          <ul>
+            <li><input type="checkbox" /> <label>Task One</label></li>
+            <li><input type="checkbox" /> <label>Task One</label></li>
+            <li><input type="checkbox" /> <label>Task One</label></li>
+          </ul>
+        </div>
+        <div class="complete-task">
+          <h1>Complete Task</h1>
+          <hr />
+          <ul>
+            <li>
+              <label>Task One</label><button class="btn-delete">Delete</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/todo.js"></script>
+  </body>
+</html>
