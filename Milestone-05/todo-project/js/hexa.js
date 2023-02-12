@@ -5,10 +5,15 @@ function main() {
   let button = document.getElementById("btn");
   let body = document.getElementById("container");
   let hexaCode = document.getElementById("hexa-code");
+  let copyBtn = document.getElementById("copy");
 
   button.addEventListener("click", () => {
-    body.style.backgroundColor = colorGenerator();
-    hexaCode.value = colorGenerator();
+    const bgColor = colorGenerator();
+    body.style.backgroundColor = bgColor;
+    hexaCode.value = bgColor;
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(hexaCode.value);
+    });
   });
 }
 function colorGenerator() {
