@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Switch Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="grid grid-cols-2 h-screen items-center gap-10">
+      <div class="bg-[url('./img/register-complete.png')] bg-center h-full p-8">
+        <a href="#"><img class="w-24" src="./img/switch-logo.png" alt="" /></a>
+      </div>
+
+      <div class="text-gray-700">
+        <h1 class="text-5xl font-bold mb-10">WellCome</h1>
+        <p class="text-xl">Login to your account.</p>
+        <div class="w-4/6 mt-24">
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="block mb-10 w-full border-b focus:outline-none focus:border-[#5B3CDE] focus:transition px-4 h-14"
+            id="user_email"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="user_pass"
+            class="block w-full border-b focus:outline-none focus:border-[#5B3CDE] focus:transition px-4 h-14"
+          />
+          <a class="text-right text-[#22B9FF] font-bold mt-4 block" href="">
+            Forget Password?
+          </a>
+          <div class="flex justify-center">
+            <button
+              id="btn_login"
+              class="bg-[#5B3CDE] py-3 text-white font-bold w-3/4 my-5 rounded-full"
+            >
+              Login
+            </button>
+          </div>
+          <p class="text-center font-bold mt-4 block">
+            New User?
+            <a href="#"><span class="text-[#22B9FF]">Create Account.</span></a>
+          </p>
+        </div>
+      </div>
+    </header>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

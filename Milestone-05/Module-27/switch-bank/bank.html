@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-4/5 mx-auto bg-[#E9F8F9]">
+    <h1 class="text-[#5B3CDE] text-5xl font-bold text-center py-10">
+      Let's Get Some <span class="text-rose-600">Moooooooooney!</span>
+    </h1>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#B9F3E4] rounded-lg px-8 py-12 space-y-3 text-green-600">
+        <h5 class="font-semibold text-2xl">Deposit</h5>
+        <h1 class="font-bold text-5xl">
+          $<span id="deposit_balance">00</span>
+        </h1>
+      </div>
+      <div class="bg-[#FFAACF] rounded-lg px-8 py-12 space-y-3 text-red-500">
+        <h5 class="font-semibold text-2xl">Withdraw</h5>
+        <h1 class="font-bold text-5xl">
+          $<span id="withdraw_balance">00</span>
+        </h1>
+      </div>
+      <div class="bg-[#EA8FEA] rounded-lg px-8 py-12 space-y-3 text-violet-700">
+        <h5 class="font-semibold text-2xl">Total Balance</h5>
+        <h1 class="font-bold text-5xl">
+          $<span id="total_balance">1240</span>
+        </h1>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 mt-12">
+      <div class="bg-[#B4FE98] px-8 py-10 rounded-xl">
+        <h1 class="font-bold text-[#5B3CDE] text-4xl">Please Deposit</h1>
+        <div class="md:w-3/4 w-full mx-auto mt-5">
+          <input
+            type="number"
+            placeholder="$Amount Your Want To Deposit"
+            id="deposit_amount"
+            class="block border-b focus:outline-none focus:border-[#5B3CDE] focus:transition px-4 h-12 w-full"
+          />
+          <button
+            id="btn_deposit"
+            class="bg-[#5B3CDE] py-3 px-10 text-white font-bold my-5 rounded-md"
+          >
+            Deposit
+          </button>
+        </div>
+      </div>
+      <div class="bg-[#D09CFA] px-8 py-10 rounded-xl">
+        <h1 class="font-bold text-[#5B3CDE] text-4xl">Please Withdraw</h1>
+        <div class="lg:w-3/4 w-full mx-auto mt-5">
+          <input
+            type="number"
+            placeholder="$Amount Your Want To Withdraw"
+            id="withdraw_amount"
+            class="block border-b focus:outline-none focus:border-[#5B3CDE] focus:transition px-4 h-12 w-full"
+          />
+          <button
+            id="btn_withdraw"
+            class="bg-[#5B3CDE] py-3 px-10 text-white font-bold my-5 rounded-md"
+          >
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bank.js"></script>
+  </body>
+</html>
