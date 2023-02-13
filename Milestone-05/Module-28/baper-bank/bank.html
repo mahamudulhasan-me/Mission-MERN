@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bap-er Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-serif h-screen bg-[#B9F3E4]">
+    <h1 class="text-center font-bold text-violet-600 text-5xl py-10">
+      Let's Get Some <span class="text-rose-500">Mooooooooney!!</span>
+    </h1>
+    <div class="w-4/5 mx-auto grid grid-cols-3 gap-4 text-black">
+      <div class="bg-[#EA8FEA] rounded-lg px-4 py-10">
+        <h1 class="text-2xl">Deposit</h1>
+        <p class="text-5xl">$<span id="deposit_balance">00</span></p>
+      </div>
+      <div class="bg-[#FFAACF] rounded-lg px-4 py-10">
+        <h1 class="text-2xl">Withdraw</h1>
+        <p class="text-5xl">$<span id="withdraw_balance">00</span></p>
+      </div>
+      <div class="bg-[#F6E6C2] rounded-lg px-4 py-10">
+        <h1 class="text-2xl">Balance</h1>
+        <p class="text-5xl">$<span id="total_balance">1240</span></p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 w-4/5 mx-auto mt-10 gap-7">
+      <div class="bg-[#6F69AC] space-y-5 px-5 py-10 rounded-lg">
+        <h2 class="text-4xl text-white">Please Deposit</h2>
+        <div class="w-4/5 mx-auto space-y-4">
+          <input
+            type="number"
+            name=""
+            id="deposit_amount"
+            placeholder="$Amount Your Want to Deposit"
+            class="block border border-violet-600 px-4 w-full h-12 focus:outline-violet-800 rounded-md"
+          />
+          <input
+            type="submit"
+            id="btn_deposit"
+            value="Deposit"
+            class="bg-[#FD6F96] text-white font-semibold px-10 py-3 rounded-md"
+          />
+        </div>
+      </div>
+      <div class="bg-[#FD6F96] space-y-5 px-5 py-10 rounded-lg">
+        <h2 class="text-4xl text-white">Please Withdraw</h2>
+        <div class="w-4/5 mx-auto space-y-4">
+          <input
+            type="number"
+            name=""
+            id="withdraw_amount"
+            placeholder="$Amount Your Want to Withdraw"
+            class="block border border-violet-600 w-full px-4 h-12 focus:outline-violet-800 rounded-md"
+          />
+          <input
+            type="submit"
+            id="btn_withdraw"
+            value="Withdraw"
+            class="bg-[#6F69AC] text-white font-semibold px-10 py-3 rounded-md"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./js/bank.js"></script>
+  </body>
+</html>
