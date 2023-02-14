@@ -3,7 +3,7 @@ function changeInputValue(styleNameId, styleName) {
   const inputValue = document.getElementById("input_value");
   styleId.onclick = function () {
     inputValue.setAttribute("style", styleName);
-    styleId.classList = "bg-[#94C4FE] text-red-500 p-3 rounded-lg";
+    styleId.classList = "bg-[#94C4FE] text-red-500 p-3 rounded-lg font-bold";
   };
 }
 changeInputValue("bold", "font-weight:900");
@@ -14,20 +14,28 @@ changeInputValue("left_align", "text-align:left");
 changeInputValue("center_align", "text-align:center");
 changeInputValue("right_align", "text-align:right");
 changeInputValue("justify_align", "text-align:justify");
+changeInputValue("latter_case", "text-transform:uppercase");
 
-function changeInputValueByValue(font_size) {
-  const styleId = document.getElementById(font_size);
+function changeInputValueByValue(styleNameId) {
+  const styleId = document.getElementById(styleNameId);
   const inputValue = document.getElementById("input_value");
   styleId.onclick = function () {
     inputValue.setAttribute("style", `font-size: ${styleId.value}px`);
   };
 }
-function changeInputValueByValue(font_color) {
-  const styleId = document.getElementById(font_color);
+changeInputValueByValue("font_size");
+
+function changeColor(styleNameId) {
+  const styleId = document.getElementById(styleNameId);
   const inputValue = document.getElementById("input_value");
 
   styleId.onclick = function () {
-    inputValue.setAttribute("style", `color: ${styleId.defaultValue.value}`);
+    inputValue.setAttribute("style", `color:${styleId.value}`);
   };
-  console.log(styleId.value);
 }
+document.getElementById("font_color").addEventListener("change", function () {
+  const colorValue = document.getElementById("font_color");
+
+  const inputValue = document.getElementById("input_value");
+  inputValue.style.color = colorValue.value;
+});
