@@ -11,25 +11,46 @@
     <div class="w-4/5 mx-auto bg-[#94C4FE]">
       <h1 class="font-medium text-center text-3xl py-8">My Text Formatter</h1>
       <div class="ring-2 ring-gray-600 w-4/5 mx-auto bg-[#BED9FD] p-4 h-full">
-        <div class="flex justify-between p-5 mx-5 border-b-2 border-gray-600">
+        <div
+          class="flex justify-between items-center p-3 mx-5 border-b-2 border-gray-600"
+        >
           <div class="space-x-5">
-            <button class="font-bold" id="bold">B</button>
-            <button class="italic font-semibold">I</button>
-            <button class="font-semibold underline">U</button>
+            <button class="font-bold p-3" id="bold">B</button>
+            <button class="italic font-semibold" id="italic">I</button>
+            <button class="font-semibold underline" id="underline">U</button>
           </div>
           <div class="space-x-5">
-            <button>B</button>
-            <button>I</button>
-            <button>U</button>
+            <button id="left_align">
+              <img src="./img/left-alignment.png" alt="" />
+            </button>
+            <button id="right_align">
+              <img src="./img/right-alignment.png" alt="" />
+            </button>
+            <button id="center_align">
+              <img src="./img/center-align.png" alt="" />
+            </button>
+            <button id="justify_align">
+              <img src="./img/justify.png" alt="" />
+            </button>
           </div>
           <div class="space-x-5">
-            <button>B</button>
-            <button>I</button>
-            <button>U</button>
+            <button>
+              <input
+                id="font_size"
+                type="number"
+                value="18"
+                class="w-14 outline-none rounded-md p-2"
+              />
+            </button>
+            <button>aA</button>
+            <button><input type="color" id="font_color" /></button>
           </div>
         </div>
         <div class="bg-white mt-4 h-96 p-5" id="text_container">
-          <textarea id="input_value" cols="30" rows="10"> </textarea>
+          <textarea
+            id="input_value"
+            class="w-full h-full outline-none"
+          ></textarea>
         </div>
       </div>
     </div>
