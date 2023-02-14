@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentain Gift</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-4/5 bg-rose-200 mx-auto pt-8">
+    <h1 class="text-rose-600 font-bold text-4xl text-center mb-4">
+      Valentine Budget : <span>3000</span>
+    </h1>
+    <header class="grid grid-cols-2">
+      <section class="w-3/5">
+        <div class="bg-white shadow-xl rounded-xl p-5 text-center mb-5">
+          <img src="./img/kitkat.png" alt="" />
+          <h3 class="text-2xl font-semibold border-t pt-3 border-rose-400">
+            KitKat Chocolate
+          </h3>
+          <p class="font-semibold text-2xl">
+            Price: <span id="kitkat_price">200</span>
+          </p>
+
+          <p class="text-xl font-bold block my-4">
+            Quantity:
+            <input
+              type="number"
+              id="kitkat_quantity"
+              value="0"
+              class="w-16 border border-rose-400 rounded-lg p-2 focus:outline-rose-500"
+            />
+          </p>
+          <button
+            id="kitkat_buy"
+            class="block bg-rose-600 hover:bg-rose-700 text-white rounded-lg py-2 px-3 text-xl mx-auto"
+          >
+            Buy Now
+          </button>
+          <!-- <div class="flex flex-col space-y-4">
+              <img src="./img/plus.png" onclick="increment()" />
+              <img src="./img/minus.png" onclick="decrement()" />
+            </div> -->
+        </div>
+        <div class="bg-white shadow-xl rounded-xl p-5 text-center mb-5">
+          <img src="./img/single-rose.jpg" alt="" />
+          <h3 class="text-2xl font-semibold border-t pt-3 border-rose-400">
+            Red Rose
+          </h3>
+          <p class="font-semibold text-2xl">
+            Price: <span id="rose_price">100</span>
+          </p>
+          <p class="text-xl font-bold block my-4">
+            Quantity:
+            <input
+              type="number"
+              id="rose_quantity"
+              value="0"
+              class="w-16 border border-rose-400 rounded-lg p-2 focus:outline-rose-500"
+            />
+          </p>
+          <button
+            id="rose_buy"
+            class="block bg-rose-600 hover:bg-rose-700 text-white rounded-lg py-2 px-3 text-xl mx-auto"
+          >
+            Buy Now
+          </button>
+        </div>
+        <div class="bg-white shadow-xl rounded-xl p-5 text-center mb-5">
+          <img src="./img/tedy.jpg" alt="" />
+          <h3 class="text-2xl font-semibold border-t pt-3 border-rose-400">
+            Teddy Bear
+          </h3>
+          <p class="font-semibold text-2xl">
+            Price: <span id="teddy_price">500</span>
+          </p>
+          <p class="text-xl font-bold block my-4">
+            Quantity:
+            <input
+              type="number"
+              id="teddy_quantity"
+              value="0"
+              class="w-16 border border-rose-400 rounded-lg p-2 focus:outline-rose-500"
+            />
+          </p>
+          <button
+            id="teddy_buy"
+            class="block bg-rose-600 hover:bg-rose-700 text-white rounded-lg py-2 px-3 text-xl mx-auto"
+          >
+            Buy Now
+          </button>
+        </div>
+      </section>
+      <section class="h-screen relative w-40">
+        <div
+          class="fixed space-y-4 pt-8 ring ring-red-500 h-3/4 text-center font-semibold text-2xl px-6"
+        >
+          <p class="border-b border-rose-500">
+            Chocolate: <span id="kitkat_total">00</span>
+          </p>
+          <p class="mt-4 border-b border-rose-500">
+            Rose: <span id="rose_total">00</span>
+          </p>
+          <p class="mt-4 border-b border-rose-500">
+            Teddy: <span id="teddy_total">00</span>
+          </p>
+          <p class="text-3xl">Total: <span id="total_amount">00</span></p>
+          <div>
+            <p class="bg-rose-600 p-3">Use Promo Code for 10% Discount</p>
+            <div class="my-5 pb-3 border-b border-rose-500">
+              <input type="text" class="w-2/4 outline-none" />
+              <button
+                class="bg-rose-600 hover:bg-rose-700 text-white rounded-lg p-2 text-xl"
+              >
+                Apply
+              </button>
+            </div>
+            <h1 class="font-bold text-4xl">All Cost: <span>00</span></h1>
+          </div>
+        </div>
+      </section>
+    </header>
+    <script src="./script.js"></script>
+  </body>
+</html>
