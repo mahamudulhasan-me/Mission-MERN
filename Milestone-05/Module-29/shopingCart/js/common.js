@@ -29,3 +29,7 @@ function subtotal() {
   const totalAmount = totalPrice + taxAmount;
   setInnerText("total", totalAmount);
 }
+
+document.getElementById("remove_item").addEventListener("click", function (e) {
+  e.target.parentElement.parentElement.remove();
+});
