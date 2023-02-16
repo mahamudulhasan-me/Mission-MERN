@@ -27,7 +27,6 @@
             <input
               type="number"
               id="kitkat_quantity"
-              value="0"
               class="w-16 border border-rose-400 rounded-lg p-2 focus:outline-rose-500"
             />
           </p>
@@ -96,7 +95,7 @@
           class="fixed space-y-4 pt-8 ring ring-red-500 h-3/4 text-center font-semibold text-2xl px-6"
         >
           <p class="border-b border-rose-500">
-            Chocolate: <span id="kitkat_total">00</span>
+            Chocolate: <span id="kitkat_total">0</span>
           </p>
           <p class="mt-4 border-b border-rose-500">
             Rose: <span id="rose_total">00</span>
@@ -106,16 +105,29 @@
           </p>
           <p class="text-3xl">Total: <span id="total_amount">00</span></p>
           <div>
-            <p class="bg-rose-600 p-3">Use Promo Code for 10% Discount</p>
+            <p class="bg-rose-600 p-2 text-lg rounded-full">
+              Use Promo Code for 10% Discount
+            </p>
+            <p class="border-b border-rose-500 mt-5">
+              Tax Amount : <span id="tax">0</span>
+            </p>
             <div class="my-5 pb-3 border-b border-rose-500">
-              <input type="text" class="w-2/4 outline-none" />
+              <input
+                id="cuppon_field"
+                type="text"
+                class="w-2/4 outline-none"
+                placeholder="DESC101"
+              />
               <button
+                id="btn_apply"
                 class="bg-rose-600 hover:bg-rose-700 text-white rounded-lg p-2 text-xl"
               >
                 Apply
               </button>
             </div>
-            <h1 class="font-bold text-4xl">All Cost: <span>00</span></h1>
+            <h1 class="font-bold text-4xl">
+              Total Amount: <span id="total_cost">00</span>
+            </h1>
           </div>
         </div>
       </section>
