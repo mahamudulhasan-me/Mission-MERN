@@ -30,15 +30,27 @@ document
 document.getElementById("save").addEventListener("click", function () {
   const income = getValue("income");
   const savingRate = getValue("saving_rate");
-  const savingAmount = (savingRate * income) / 100;
-  if (isNaN(savingAmount)) {
-    alert("Please enter a Saving Rate");
-  } else {
-    document.getElementById("saving_amount").innerText = savingAmount;
+  const balance = document.getElementById("balance");
+  const balanceToNum = parseFloat(balance.innerText);
 
-    const balanceAfterExpenses = document.getElementById("balance").innerText;
-    document.getElementById("remaining_balance").innerText =
-      balanceAfterExpenses - savingAmount;
+  const savingAmount = (savingRate * income) / 100;
+  if (savingRate > 100) {
+    alert("Please enter a saving rate less than 100");
+  } else {
+    if (isNaN(savingAmount)) {
+      alert("Please enter a Saving Rate");
+    } else {
+      if (savingAmount > balanceToNum) {
+        alert("Sorry, you don't have enough money");
+      } else {
+        document.getElementById("saving_amount").innerText = savingAmount;
+
+        const balanceAfterExpenses =
+          document.getElementById("balance").innerText;
+        document.getElementById("remaining_balance").innerText =
+          balanceAfterExpenses - savingAmount;
+      }
+    }
   }
 });
 let allInput = document.querySelectorAll('input[type="number"]');
