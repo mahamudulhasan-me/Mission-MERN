@@ -26,7 +26,7 @@
               class="input input-bordered"
             />
           </div>
-          <input type="checkbox" class="toggle" checked />
+          <input type="checkbox" class="toggle" checked id="btn_mode" />
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
@@ -52,58 +52,157 @@
     </header>
     <main class="mt-10 px-[5%]">
       <div class="grid grid-cols-3 gap-5">
-        <div class="flex">
-          <div
-            class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
-          >
-            <figure>
-              <img src="https://source.unsplash.com/user/c_v_r/" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Product-1</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <p class="text-xl">Price: $<span class="font-bold">100</span></p>
-              <p class="text-xl">Quantity: <span class="font-bold">5</span></p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+        <div class="col-span-2">
+          <div class="grid grid-cols-3 gap-5">
+            <div
+              class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
+            >
+              <figure>
+                <img src="img/img-1.jpg" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Books</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p class="text-xl">
+                  Price: $<span class="font-bold" id="book_price">100</span>
+                </p>
+                <p class="text-xl">
+                  Quantity: <span class="font-bold" id="book_quantity">5</span>
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary" id="btn_book">Buy Now</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
-          >
-            <figure>
-              <img src="https://source.unsplash.com/user/c_v_r/" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Product-1</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <p class="text-xl">Price: $<span class="font-bold">100</span></p>
-              <p class="text-xl">Quantity: <span class="font-bold">5</span></p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div
+              class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
+            >
+              <figure>
+                <img class="h-50" src="img/img-2.jpg" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Product-1</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p class="text-xl">
+                  Price: $<span class="font-bold">100</span>
+                </p>
+                <p class="text-xl">
+                  Quantity: <span class="font-bold">5</span>
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
-          >
-            <figure>
-              <img src="https://source.unsplash.com/user/c_v_r/" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Product-1</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <p class="text-xl">Price: $<span class="font-bold">100</span></p>
-              <p class="text-xl">Quantity: <span class="font-bold">5</span></p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div
+              class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
+            >
+              <figure>
+                <img src="img/img-3.jpg" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Product-1</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p class="text-xl">
+                  Price: $<span class="font-bold">100</span>
+                </p>
+                <p class="text-xl">
+                  Quantity: <span class="font-bold">5</span>
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
+            >
+              <figure>
+                <img src="img/img-4.jpg" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Product-1</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p class="text-xl">
+                  Price: $<span class="font-bold">100</span>
+                </p>
+                <p class="text-xl">
+                  Quantity: <span class="font-bold">5</span>
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
+            >
+              <figure>
+                <img src="img/img-5.jpg" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Product-1</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p class="text-xl">
+                  Price: $<span class="font-bold">100</span>
+                </p>
+                <p class="text-xl">
+                  Quantity: <span class="font-bold">5</span>
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card card-compact w-full bg-base-100 shadow-xl ring-1 ring-violet-400"
+            >
+              <figure>
+                <img src="img/img-6.jpg" alt="" />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Product-1</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <input
+                  type="text"
+                  placeholder="Price"
+                  class="input input-bordered input-secondary w-full max-w-xs"
+                />
+                <input
+                  type="text"
+                  placeholder="Quantity"
+                  class="input input-bordered input-secondary w-full max-w-xs"
+                />
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div>
+          <h1
+            class="text-4xl font-bold text-violet-500 text-center border-b border-violet-400"
+          >
+            ToTal Products: <span>0</span>
+          </h1>
+          <div class="h-80 bg-violet-200">
+            <table class="w-full text-violet-700 mt-5 text-center">
+              <thead class="bg-violet-300 h-10">
+                <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>ToTal</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
