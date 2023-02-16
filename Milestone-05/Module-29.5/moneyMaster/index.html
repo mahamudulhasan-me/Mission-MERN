@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      input {
+        height: 2.5rem;
+        width: 50%;
+        background-color: #f7f9fd;
+      }
+      .save input {
+        width: 30%;
+      }
+      input:focus {
+        outline: none;
+      }
+      label {
+        margin-right: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="px-10 h-screen">
+      <div>
+        <p
+          class="text-4xl text-violet-600 font-bold flex items-center justify-center gap-4 my-10"
+        >
+          Money Master <img src="./img/money-bag.png" alt="" />
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-10">
+        <div>
+          <img src="./img/money-2.jpg" alt="" />
+        </div>
+        <div class="bg-gray-300 text-center font-semibold space-y-5 py-10">
+          <h3 class="text-2xl">Income</h3>
+          <label for="income">Income:</label>
+          <input type="number" name="income" id="income" />
+          <h3 class="text-2xl">Expenses</h3>
+          <label for="food">Food: </label>
+          <input type="number" name="food" id="food" /><br />
+          <label for="rent">Rent: </label>
+          <input type="number" name="rent" id="rent" /><br />
+          <label for="clothes">Clothes:</label>
+          <input type="number" name="clothes" id="clothes" /><br />
+          <button
+            id="btn_calculate"
+            class="bg-violet-500 text-white text-2xl px-8 py-2"
+          >
+            Calculate
+          </button>
+          <h3 class="text-2xl">
+            Total Expenses:
+            <span id="total_expenses" class="text-violet-500">00</span>
+          </h3>
+          <h2 class="text-2xl">
+            Balance: <span id="balance" class="text-violet-500">00</span>
+          </h2>
+          <div class="flex save items-center justify-center gap-3">
+            <label for="save">Save: </label>
+            <input type="number" name="save" id="saving_rate" />
+            <p>%</p>
+            <button
+              id="save"
+              class="bg-violet-500 text-white text-2xl px-8 py-2"
+            >
+              Save
+            </button>
+          </div>
+          <h3 class="text-2xl">
+            Saving Amount:
+            <span id="saving_amount" class="text-violet-500">00</span>
+          </h3>
+          <h3 class="text-2xl">
+            Remaining Balance:
+            <span id="remaining_balance" class="text-violet-500">0</span>
+          </h3>
+        </div>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
