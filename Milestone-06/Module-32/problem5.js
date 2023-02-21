@@ -31,3 +31,5 @@ console.log(user.address);
 console.log(user.address.city);
 console.log(user.address.geo.lat);
 console.log(user.company.name);
+console.log(user.address.geo.lat);
+console.log(user.company.name);
