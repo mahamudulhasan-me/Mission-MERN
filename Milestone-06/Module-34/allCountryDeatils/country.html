@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-5">
+    <h1
+      class="text-center ring ring-violet-600 p-5 rounded-xl text-4xl font-bold text-rose-400"
+    >
+      All Country Details
+    </h1>
+    <div
+      id="country_container"
+      class="md:grid md:grid-cols-4 gap-5 ring items-center rounded-xl mt-10 ring-rose-500 p-5"
+    ></div>
+    <div>
+      <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box w-11/12 max-w-5xl"></div>
+      </div>
+    </div>
+    <script src="./countryDetails.js"></script>
+  </body>
+</html>
