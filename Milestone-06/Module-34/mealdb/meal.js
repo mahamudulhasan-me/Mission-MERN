@@ -92,7 +92,7 @@ function displayFood(foods) {
                   There are many variations of passages of available, but the
                   majority have suffered
                 </p>
-                <button class="font-semibold text-yellow-400 underline text-xl" onclick ="loadFoodDetails(${food.idMeal})"">
+                <label for="my-modal-3" class="font-semibold text-yellow-400 underline text-xl" onclick ="loadFoodDetails(${food.idMeal})"">
                   View Details
                 </button>
               </div>
