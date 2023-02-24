@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealDB</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header class="h-screen">
+      <div class="flex px-[10%] justify-between items-center border-b py-5">
+        <img src="./img/Tasty_HUT.png" alt="" />
+        <button
+          class="px-5 py-3 font-bold text-gray-800 bg-yellow-400 rounded-lg"
+        >
+          Sign Up
+        </button>
+      </div>
+      <!-- Banner Section Start  -->
+      <div
+        class="text-center space-y-4 text-white flex justify-center items-center flex-col h-[80%] bg-[url('./img/banner_1.png')] bg-slate-800 bg-blend-overlay"
+      >
+        <h1 class="text-5xl font-bold">
+          Taste Our Delicious <br />
+          Best Foods
+        </h1>
+        <p>
+          There are many variations of passages of Lorem Ipsum available, <br />
+          but the majority have suffered alteration in some form, by injected
+          humou.
+        </p>
+        <div class="flex items-center h-12">
+          <input
+            type="search"
+            name=""
+            id="search"
+            placeholder="search any food"
+            class="w-96 p-2 rounded outline-yellow-400 text-gray-600"
+          />
+          <button
+            class="px-7 py-2 -ml-2 font-bold text-gray-800 bg-yellow-400 rounded-lg"
+            id="btn_search"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Section Start -->
+    <main class="w-4/5 mx-auto">
+      <section>
+        <h1 class="font-semibold text-gray-800 text-3xl text-center mb-12">
+          Your Favorite Food
+        </h1>
+        <div
+          class="grid grid-cols-2 grid-rows-3 gap-5"
+          id="food_container"
+        ></div>
+
+        <div
+          class="mx-auto w-full text-center mt-8"
+          id="btn_showAll_container"
+        ></div>
+
+        <!-- Put this part before </body> tag -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box relative"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./meal.js"></script>
+  </body>
+</html>
