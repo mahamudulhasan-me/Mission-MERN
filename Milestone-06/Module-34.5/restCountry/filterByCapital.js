@@ -71,7 +71,8 @@ const showCountryByRegion = (countries) => {
     countryContainer.appendChild(div);
   });
 };
-document.querySelector("select").addEventListener("keyup", (e) => {
+document.querySelector("#capital_container").addEventListener("keyup", (e) => {
   document.getElementById("country_container").innerHTML = "";
   loadAllCountry(e.target.value);
+  //   console.log(e.target.value);
 });
