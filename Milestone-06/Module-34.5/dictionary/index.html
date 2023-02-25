@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-mono">
+    <section
+      class="p-2 w-1/2 mx-auto mt-5 text-gray-800 flex h-12 justify-center items-center"
+    >
+      <input
+        type="search"
+        name=""
+        id="search_value"
+        class="text-xl outline-none px-2 border py-1 w-1/2 focus:outline-violet-300 rounded-lg border-violet-500"
+      />
+      <button
+        class="px-5 py-2 font-semibold rounded-md ml-3 bg-violet-400"
+        id="search"
+      >
+        Search
+      </button>
+    </section>
+    <main
+      class="ring ring-violet-400 p-5 w-1/2 mx-auto mt-5"
+      id="container"
+    ></main>
+    <script src="./main.js"></script>
+  </body>
+</html>
