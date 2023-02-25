@@ -35,7 +35,7 @@ const carContainer = document.getElementById("car_container");
 data.slice(0, 2).forEach((car) => {
   console.log(car);
   const div = document.createElement("div");
-  div.classList = "w-1/2";
+  div.classList = "w-1/2 p-3";
   div.innerHTML = `
           <div>
             <img src="${car.imageURL}" alt="" />

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Problem-1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="w-4/5 my-10 mx-auto">
+      <div class="flex justify-between bg-gray-100 border-b py-4 px-3">
+        <h2 class="font-bold text-2xl text-violet-400">All Country Info</h2>
+        <div>
+          <input
+            type="search"
+            id="capital_container"
+            class="w-52 px-3 h-10 font-semibold text-xl"
+            placeholder="Filter by Capital"
+          />
+        </div>
+      </div>
+      <div id="country_container"></div>
+    </main>
+    <script src="./filterByCapital.js"></script>
+  </body>
+</html>
