@@ -4,7 +4,6 @@ const loadPhone = async (searchText, dataLimit) => {
   );
   const data = await response.json();
   displayPhones(data.data, dataLimit);
-  console.log(data.data, dataLimit);
 };
 
 const displayPhones = (phones, dataLimit) => {
@@ -13,7 +12,9 @@ const displayPhones = (phones, dataLimit) => {
   const btnShowAll = document.getElementById("btn_showAll");
   let phone = phones.slice(0, dataLimit);
   if (phone.length === 0) {
-    notFound.classList.remove("hidden");
+    setTimeout(() => {
+      notFound.classList.remove("hidden");
+    }, 1000);
     btnShowAll.classList.add("hidden");
   } else if (phone.length > 8) {
     btnShowAll.classList.remove("hidden");
@@ -53,9 +54,11 @@ const displayPhones = (phones, dataLimit) => {
 
 document.getElementById("search").addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
-    showSpinner(true);
-    document.getElementById("phone_container").innerHTML = "";
-    loadPhone(e.target.value, 9);
+    if (e.target.value != "") {
+      showSpinner(true);
+      document.getElementById("phone_container").innerHTML = "";
+      loadPhone(e.target.value, 9);
+    }
   }
 });
 
@@ -67,17 +70,14 @@ function showSpinner(isLoading) {
     spinner.classList.add("hidden");
   }
 }
+
 document.getElementById("btn_showAll").addEventListener("click", (e) => {
-  const searchInput = document.getElementById("search");
-  const searchValue = searchInput.value;
+  const searchValue = document.getElementById("search").value;
   loadPhone(searchValue ? searchValue : "iphone");
   e.target.style.display = "none";
-  const btnShowLess = document.getElementById("btn_showLess");
-  btnShowLess.classList.remove("hidden");
-  btnShowLess.addEventListener("click", (e) => {
-    loadPhone(searchValue, 9);
-  });
+  document.getElementById("btn_showLess").classList.remove("hidden");
 });
+
 loadPhone("iphone", 9);
 
 // display show all details functionality
@@ -87,7 +87,6 @@ const loadPhoneDetails = async (slug) => {
     `https://openapi.programming-hero.com/api/phone/${slug}`
   );
   const data = await response.json();
-  console.log(data.data);
   showDetails(data.data);
 };
 
