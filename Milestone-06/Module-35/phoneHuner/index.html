@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="px-[10%] bg-slate-900">
+      <div class="navbar">
+        <div class="flex-1">
+          <a class="btn btn-ghost uppercase text-xl text-white">Phone Hunter</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered"
+              id="search"
+            />
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://picsum.photos/200/300" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-4/5 mx-auto mt-10">
+      <div class="grid md:grid-cols-3 gap-5" id="phone_container"></div>
+      <div class="flex justify-center my-10">
+        <button class="btn btn-primary hidden" id="btn_showAll">
+          Show All
+        </button>
+      </div>
+      <div class="flex justify-center my-10">
+        <button class="btn btn-primary hidden" id="btn_showLess">
+          Show Less
+        </button>
+      </div>
+    </main>
+
+    <!-- not found message -->
+    <div class="text-center hidden" id="spinner">
+      <progress class="progress w-36"></progress>
+    </div>
+    <h1
+      class="hidden text-center mt-44 text-yellow-500 font-semibold text-2xl"
+      id="msg_notFound"
+    >
+      Not Found! Please Search Another Phone.
+    </h1>
+
+    <input type="checkbox" id="my-modal" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box font-mono"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
