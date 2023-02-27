@@ -19,14 +19,18 @@
 //   return sum;
 // }
 // console.log(sumAll(1, 2, 3, 4, 5));
-let txt;
-const person = {
-  fname: " John",
-  lname: " Doe",
-  age: 25,
-};
+// let txt;
+// const person = {
+//   fname: " John",
+//   lname: " Doe",
+//   age: 25,
+// };
 
-for (let x in person) {
-  txt += person[x];
+// for (let x in person) {
+//   txt += person[x];
+// }
+// console.log(txt);
+
+for (let i = 1; i < 6; i++) {
+  console.log("* ".repeat(i));
 }
-console.log(txt);
