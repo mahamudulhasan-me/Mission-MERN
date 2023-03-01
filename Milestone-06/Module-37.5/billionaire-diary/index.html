@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billionaire Dairy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="grid grid-cols-4 w-4/5 mx-auto h-screen my-10 border-2 border-[#0E1B34]"
+    >
+      <section class="bg-[#0E1B34] text-center text-white py-5">
+        <img src="./img/logo/logo.png" alt="" class="mx-auto mb-8" />
+        <div class="space-y-3">
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Add A User
+          </button>
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Double Money
+          </button>
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Sort By Bank
+          </button>
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Calculate Entire Wealth
+          </button>
+        </div>
+        <div class="flex w-4/5 mx-auto justify-center my-8 items-center">
+          <div class="w-2 h-2 rounded-full bg-[#D9D9D9]"></div>
+          <div class="w-4/5 h-1 bg-[#D9D9D9]"></div>
+          <div class="w-2 h-2 rounded-full bg-[#D9D9D9]"></div>
+        </div>
+        <div class="space-y-3">
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Show All Billionaires
+          </button>
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Richest by industry
+          </button>
+          <button class="text-[#0E1B34] bg-[#D9D9D9] font-semibold w-4/5 py-2">
+            Richest by states
+          </button>
+        </div>
+      </section>
+      <section class="col-span-3">
+        <div class="flex justify-between items-center py-3 pl-10">
+          <input
+            type="search"
+            class="border-b border-gray-500 outline-none"
+            placeholder="Search"
+          />
+          <img src="./img/logo/logo1.png" alt="" class="h-16" />
+        </div>
+        <div class="bg-[#D9D9D9] pl-10 pr-16 space-y-4 py-3 h-[86%]">
+          <h2 class="font-semibold text-xl">Hello User</h2>
+          <div
+            class="border-b border-[#0E1B34] font-semibold text-lg flex justify-between py-2"
+          >
+            <h3 class="w-[30%]">Person</h3>
+            <h3 class="w-[20%]">Citizenship</h3>
+            <h3 class="w-[20%]">Industry</h3>
+            <h3 class="w-[10%]">Rank</h3>
+            <h3 class="w-[20%]">Wealth</h3>
+          </div>
+          <div id="m_container"></div>
+          <div
+            class="border-t border-[#0E1B34] font-semibold text-lg flex justify-between py-2"
+          >
+            <h3>Total</h3>
+            <h3>$<span id="total_wealth">0</span></h3>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
