@@ -6,9 +6,9 @@
 // console.log(name.toUpperCase());
 const arr = [1, 2, 3];
 const a = arr.slice(-2, 1);
-console.log(a);
+// console.log(a);
 const greeting = "Hello, world!";
-console.log(greeting);
+// console.log(greeting);
 // console.log(x);
 // functionss();
 // console.log(5 + a);
@@ -16,4 +16,12 @@ console.log(greeting);
 //   a: "a",
 // };
 // console.log(myObj.b);
-console.log(tumi());
+// console.log(tumi());
+function errors(a) {
+  if (a > 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(errors(10));
