@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavel 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-gray-800 p-10 w-1/2 mx-auto">
+      <div class="ml-10">
+        <label class="text-blue-600" for="name">Name</label><br />
+        <div class="flex justify-start gap-4 items-center">
+          <input class="h-8 w-5/12" type="text" name="name" id="name" />
+
+          <div class="flex items-center gap-1">
+            <button
+              id="btn_delete-name"
+              class="bg-orange-700 px-3 py-2 text-white rounded-md"
+            >
+              Delete Name
+            </button>
+            <div class="w-0.5 h-10 bg-gray-500"></div>
+            <button
+              id="btn_send-name"
+              class="bg-orange-700 px-3 py-2 text-white rounded-md"
+            >
+              Send Name
+            </button>
+          </div>
+        </div>
+        <label class="text-blue-600" for="name">Email</label><br />
+        <div class="flex justify-start gap-4 items-center">
+          <input class="h-8 w-5/12" type="text" name="email" id="email" />
+
+          <div class="flex items-center gap-1">
+            <button
+              id="btn_delete-email"
+              class="bg-orange-700 px-3 py-2 text-white rounded-md"
+            >
+              Delete Email
+            </button>
+            <div class="w-0.5 h-10 bg-gray-500"></div>
+            <button
+              id="btn_send-email"
+              class="bg-orange-700 px-3 py-2 text-white rounded-md"
+            >
+              Send Email
+            </button>
+          </div>
+        </div>
+        <label class="text-blue-600" for="name">Message</label><br />
+        <div class="flex justify-start gap-4 items-center">
+          <textarea
+            class="h-10 w-5/12"
+            type="text"
+            name="message"
+            id="message"
+          ></textarea>
+
+          <div class="flex items-center gap-1">
+            <button
+              id="btn_delete-message"
+              class="bg-orange-700 px-3 py-2 text-white rounded-md"
+            >
+              Delete Message
+            </button>
+            <div class="w-0.5 h-10 bg-gray-500"></div>
+            <button
+              id="btn_send-message"
+              class="bg-orange-700 px-3 py-2 text-white rounded-md"
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+        <button
+          id="btn_reset"
+          class="my-8 bg-yellow-500 px-4 text-white py-2 rounded-xl font-semibold mx-auto w-28 flex justify-center"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
