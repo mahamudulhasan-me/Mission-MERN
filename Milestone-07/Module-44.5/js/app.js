@@ -10,8 +10,8 @@ const displayPhones = (phones, dataLimit) => {
   console.log(phones.length);
   const phonesContainer = document.getElementById("phones-container");
   const showAll = document.getElementById("show-all");
-  phones = phones.slice(0, dataLimit);
-  if (phones.length < 10) {
+  if (dataLimit && phones.length > 10) {
+    phones = phones.slice(0, 10);
     showAll.classList.remove("d-none");
   } else {
     showAll.classList.add("d-none");
@@ -46,31 +46,38 @@ const displayPhones = (phones, dataLimit) => {
   toggleSpinner(true);
 };
 
-const processSearch = (dataLimit) => {
-  toggleSpinner(false);
+// const processSearch = (dataLimit) => {
+//   toggleSpinner(false);
+
+//   loadPhones(searchText, dataLimit);
+// };
+function getInputValue() {
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
-  loadPhones(searchText, dataLimit);
-  searchField.value = "";
-};
-
+  console.log(searchText);
+  return searchText;
+}
 // handle search button click
 document.getElementById("btn-search").addEventListener("click", function () {
   // start loader
-  processSearch(10);
+  loadPhones(getInputValue(), 10);
   document.getElementById("phones-container").innerHTML = "";
 });
+// not the best way to load show All
 
 // search input field enter key handler
 document
   .getElementById("search-field")
   .addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-      processSearch(e.target.value, 10);
-      e.target.value = "";
+      loadPhones(getInputValue(), 10);
       document.getElementById("phones-container").innerHTML = "";
     }
   });
+document.getElementById("btn-show-all").addEventListener("click", function (e) {
+  loadPhones(getInputValue(), undefined);
+  document.getElementById("phones-container").innerHTML = "";
+});
 
 const toggleSpinner = (isLoading) => {
   const loaderSection = document.getElementById("loader");
@@ -81,27 +88,22 @@ const toggleSpinner = (isLoading) => {
   }
 };
 
-// not the best way to load show All
-document.getElementById("btn-show-all").addEventListener("click", function () {
-  processSearch();
-});
-
 const loadPhoneDetails = async (id) => {
-  const url = `www.openapi.programming-hero.com/api/phone/${id}`;
+  console.log(id);
+  const url = `https://openapi.programming-hero.com/api/phone/${id}`;
   const res = await fetch(url);
   const data = await res.json();
   displayPhoneDetails(data.data);
 };
 
 const displayPhoneDetails = (phone) => {
-  console.log(phone);
+  console.log(phone.releaseDate);
   const modalTitle = document.getElementById("phoneDetailModalLabel");
   modalTitle.innerText = phone.name;
   const phoneDetails = document.getElementById("phone-details");
-  console.log(phone.mainFeatures.sensors[0]);
   phoneDetails.innerHTML = `
         <p>Release Date: ${phone.releaseDate}</p>
-        <p>Storage: ${phone.mainFeatures}</p>
+        <p>Storage: ${phone.mainFeatures.storage}</p>
         <p>Others: ${
           phone.others ? phone.others.Bluetooth : "No Bluetooth Information"
         }</p>
