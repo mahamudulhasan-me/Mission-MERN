@@ -1,0 +1,12 @@
+#root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.single-country {
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: aquamarine;
+  text-align: center;
+  padding: 5px;
+}
