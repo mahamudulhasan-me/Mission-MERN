@@ -1,7 +1,16 @@
 import "./App.css";
+import Country from "./components/Country/Country";
+import Header from "./components/Header/Header";
+import Person from "./components/Person/Person";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header></Header>
+      <Country></Country>
+      <Person></Person>
+    </div>
+  );
 }
 
 // function LoadCountries() {
