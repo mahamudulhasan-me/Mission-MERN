@@ -8,36 +8,28 @@ function App() {
     </div>
   );
 }
+
 function ExternalUsers() {
   const [users, setUsers] = useState([]);
-  // useEffect(()=>{},[])
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users`).then((response) =>
-      response.json().then((data) => setUsers(data))
-    );
+    fetch(`https://jsonplaceholder.typicode.com/users`)
+      .then((response) => response.json())
+      .then((users) => setUsers(users));
   }, []);
-
   return (
     <div>
       <h2>External Users</h2>
-      <p>{users.length}</p>
       {users.map((user) => (
-        <ShowUserInfo
-          name={user.name}
-          email={user.email}
-          address={user.address?.street}
-        ></ShowUserInfo>
+        <ShowUser name={user.name} email={user.email}></ShowUser>
       ))}
     </div>
   );
 }
-
-function ShowUserInfo(props) {
+function ShowUser(props) {
   return (
     <div className="user">
-      <h2>Name: {props.name}</h2>
-      <p>Email: {props.email}</p>
-      <p>Address: {props.address}</p>
+      <h3>Name: {props.name}</h3>
+      <p>Emil: {props.email}</p>
     </div>
   );
 }
