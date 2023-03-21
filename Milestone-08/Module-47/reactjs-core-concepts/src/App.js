@@ -1,33 +1,31 @@
 import "./App.css";
 
+const showNameStyle = {
+  border: "1px solid red",
+  padding: "1rem",
+  margin: "1rem",
+};
 function App() {
-  const players = ["Sakib", "Mushfiq", "Tamim", "Mashrafee"];
+  const playersInfo = [
+    { name: "Sakib", batter: "Yes", bowling: "Yes" },
+    { name: "Tamim", batter: "Yes", bowling: "No" },
+    { name: "Musfique", batter: "Yes", bowling: "No" },
+  ];
   return (
     <div className="App">
-      {players.map((player) => (
-        <li>Name: {player}</li>
+      {playersInfo.map(({ name, batter, bowling }) => (
+        <ShowName name={name} batter={batter} bowling={bowling}></ShowName>
       ))}
     </div>
   );
 }
-function Person(props) {
-  // console.log(props);
-  return (
-    <div className="person">
-      <h1>{props.name}</h1>
-      <h2>Nayika: {props.nayika}</h2>
-    </div>
-  );
-}
 
-function Friend(props) {
-  // console.log(props);
+function ShowName(props) {
   return (
-    <div className="friend">
-      <h3>Name: Ajay Devgun</h3>
-      <h3>Phone:{props.phone}</h3>
-      <h3>Movie: {props.movie}</h3>
-      <p>Job: Maramari</p>
+    <div style={showNameStyle}>
+      <h2>Name: {props.name}</h2>
+      <h3>Batter: {props.batter}</h3>
+      <h3>Bowling: {props.bowling}</h3>
     </div>
   );
 }
