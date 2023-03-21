@@ -48,3 +48,10 @@
   border-radius: 10px;
   margin: 1rem;
 }
+button {
+  margin-left: 10px;
+}
+.user {
+  border: 1px solid red;
+  margin: 1rem;
+}
