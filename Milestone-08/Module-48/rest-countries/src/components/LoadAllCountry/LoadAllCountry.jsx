@@ -11,9 +11,11 @@ const LoadAllCountry = () => {
   }, []);
   return (
     <div>
-      <h2>There Are All County of The World</h2>
-      <h3>Total Country: {countries.length}</h3>
-      <div className="country_container">
+      <h2 className="text-3xl text-center  font-bold">
+        There Are All County of The World
+      </h2>
+      <h3 className="text-center">Total Country: {countries.length}</h3>
+      <div className="grid grid-cols-3">
         {countries.map((country) => (
           <ShowCountry key={country.cca3} country={country}></ShowCountry>
         ))}
