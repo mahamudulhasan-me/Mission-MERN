@@ -3,8 +3,7 @@ import OpenModal from "./OpenModal";
 import "./ShowCountry.css";
 
 const ShowCountry = (props) => {
-  const { name, capital, region, flags, languages } = props.country;
-
+  const { name, capital, region, flags, languages, cca3 } = props.country;
   return (
     <div className="grid grid-cols-4 border-b my-2 py-1 text-xl text-center items-center">
       <img src={flags.png} alt="" className="w-32" />

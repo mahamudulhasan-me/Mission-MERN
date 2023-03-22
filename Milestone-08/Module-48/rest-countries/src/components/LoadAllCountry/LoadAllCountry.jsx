@@ -42,7 +42,7 @@ const LoadAllCountry = () => {
       </div>
       <div>
         {countries.map((country) => (
-          <ShowCountry country={country}></ShowCountry>
+          <ShowCountry key={country.cca3} country={country}></ShowCountry>
         ))}
       </div>
     </div>
