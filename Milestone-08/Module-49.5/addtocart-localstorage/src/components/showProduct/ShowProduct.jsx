@@ -1,9 +1,15 @@
 import React from "react";
-import { setItemOnLocalStorage } from "../utilities/setItem";
+import {
+  removeItemOnLocalStorage,
+  setItemOnLocalStorage,
+} from "../utilities/setItem";
 
 const ShowProduct = (props) => {
   const getId = (id) => {
     setItemOnLocalStorage(id);
+  };
+  const removeItem = (id) => {
+    removeItemOnLocalStorage(id);
   };
   const { title, price, category, image, rating, id } = props.product;
   return (
@@ -17,6 +23,12 @@ const ShowProduct = (props) => {
         className="bg-rose-500 text-white font-semibold py-2 px-4"
       >
         Add to Cart
+      </button>
+      <button
+        onClick={() => removeItem(id)}
+        className="bg-red-600 text-white font-semibold py-2 px-4 ml-4"
+      >
+        Remove Item
       </button>
     </div>
   );

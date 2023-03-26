@@ -1,20 +1,31 @@
 function setItemOnLocalStorage(id) {
-  let productList;
-  const isProductListAvailable = localStorage.getItem("product-list");
-  if (isProductListAvailable) {
-    productList = JSON.parse(isProductListAvailable);
+  let productList = {};
+  const isProductAvailable = localStorage.getItem("product-list");
+  if (isProductAvailable) {
+    productList = JSON.parse(isProductAvailable);
   } else {
     productList = {};
   }
-  const quantity = productList[id];
+
+  let quantity = productList[id];
   if (quantity) {
-    const newQuantity = parseInt(quantity) + 1;
+    const newQuantity = quantity + 1;
     productList[id] = newQuantity;
   } else {
     productList[id] = 1;
   }
-
   localStorage.setItem("product-list", JSON.stringify(productList));
 }
 
-export { setItemOnLocalStorage };
+function removeItemOnLocalStorage(id) {
+  const isProductAvailable = localStorage.getItem("product-list");
+  if (isProductAvailable) {
+    const parsedList = JSON.parse(isProductAvailable);
+    if (id in parsedList) {
+      delete parsedList[id];
+      localStorage.setItem("product-list", JSON.stringify(parsedList));
+    }
+  }
+}
+
+export { setItemOnLocalStorage, removeItemOnLocalStorage };
