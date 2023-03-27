@@ -1,16 +1,26 @@
 import { useEffect, useState } from "react";
+import LoadCountry from "../LoadCountry/LoadCountry";
+import OpenModal from "../ShowAllCountry/OpenModal";
 import ShowCountry from "../ShowAllCountry/ShowCountry";
 import "./LoadAllCountry.css";
 
 const LoadAllCountry = () => {
   const [countries, setCountries] = useState([]);
+  const [uniqueId, setUniqueId] = useState(null);
+  console.log(uniqueId);
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/all`)
       .then((response) => response.json())
       .then((data) => setCountries(data));
   }, []);
+  useEffect(() => {
+    fetch(`https://restcountries.com/v3.1/alpha/${uniqueId}`)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, [uniqueId]);
   return (
     <div className="w-4/5 mx-auto">
+      <LoadCountry cca3={uniqueId} />
       <h2 className="text-3xl font-bold text-center">
         Countries and Regions of the World from A to Z
       </h2>
@@ -42,9 +52,14 @@ const LoadAllCountry = () => {
       </div>
       <div>
         {countries.map((country) => (
-          <ShowCountry key={country.cca3} country={country}></ShowCountry>
+          <ShowCountry
+            key={country.cca3}
+            country={country}
+            uniqueId={setUniqueId}
+          ></ShowCountry>
         ))}
       </div>
+      <OpenModal />
     </div>
   );
 };
