@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
+import {
+  addLocalStorage,
+  getProductFromDB,
+} from "../Utilities/AddReturnFromDB";
 
 const ProductContainer = () => {
   const [products, setProducts] = useState([]);
@@ -8,6 +12,7 @@ const ProductContainer = () => {
   const addToCart = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
+    addLocalStorage(product.id);
   };
 
   useEffect(() => {
@@ -15,6 +20,20 @@ const ProductContainer = () => {
       .then((response) => response.json())
       .then((products) => setProducts(products));
   }, []);
+
+  useEffect(() => {
+    const storedCart = getProductFromDB();
+    const saveCart = [];
+    for (const id in storedCart) {
+      const addedProduct = products.find((pd) => pd.id == id);
+      if (addedProduct) {
+        const quantity = storedCart[id];
+        addedProduct.quantity = quantity;
+        saveCart.push(addedProduct);
+      }
+    }
+    setCart(saveCart);
+  }, [products]);
   return (
     <div className="grid grid-cols-12 pl-[5%] gap-8 relative">
       <div className="col-span-9">
@@ -22,7 +41,7 @@ const ProductContainer = () => {
           {products.map((product) => (
             <Product
               product={product}
-              key={product.id}
+              key={product?.id}
               addToCart={addToCart}
             ></Product>
           ))}

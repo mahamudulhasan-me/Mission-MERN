@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Cart = ({ cart }) => {
+  const quantity = cart.reduce((pre, current) => pre + current.quantity, 0);
   const totalPrice = cart.reduce((pre, current) => pre + current.price, 0);
   const shippingCharge = cart.reduce(
     (pre, current) => pre + current.shipping,
@@ -18,7 +19,7 @@ const Cart = ({ cart }) => {
           Order Summary
         </h2>
         <div className="space-y-3 text-xl">
-          <p>Selected Items: {cart.length}</p>
+          <p>Selected Items: {quantity}</p>
           <p>Total Price: $ {totalPrice}</p>
           <p>Total Shipping Charge: ${shippingCharge}</p>
           <p>Tax: ${tax}</p>
