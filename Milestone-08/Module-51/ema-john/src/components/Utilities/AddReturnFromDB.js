@@ -19,4 +19,7 @@ function getProductFromDB() {
   const getProduct = localStorage.getItem("product-cart");
   return JSON.parse(getProduct);
 }
-export { addLocalStorage, getProductFromDB };
+function clearLocalStorage() {
+  localStorage.removeItem("product-cart");
+}
+export { addLocalStorage, getProductFromDB, clearLocalStorage };
