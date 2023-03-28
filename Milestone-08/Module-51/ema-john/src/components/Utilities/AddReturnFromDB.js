@@ -7,7 +7,7 @@ function addLocalStorage(id) {
     localStorage.setItem("product-cart", JSON.stringify(productCart));
   }
   const quantity = productCart[id];
-  if (id in productCart) {
+  if (quantity) {
     productCart[id] = quantity + 1;
   } else {
     productCart[id] = 1;

@@ -13,11 +13,11 @@ const ProductContainer = () => {
     // const newCart = [...cart, product];
     // setCart(newCart);
     let newCart = [];
-    const isExist = cart.find((pd) => pd.id === product.id);
-    if (isExist) {
-      isExist.quantity = isExist.quantity + 1;
+    const isExistProduct = cart.find((pd) => pd.id === product.id);
+    if (isExistProduct) {
+      isExistProduct.quantity = isExistProduct.quantity + 1;
       const restProduct = cart.filter((pd) => pd.id !== product.id);
-      newCart = [...restProduct, isExist];
+      newCart = [...restProduct, isExistProduct];
     } else {
       product.quantity = 1;
       newCart = [...cart, product];
