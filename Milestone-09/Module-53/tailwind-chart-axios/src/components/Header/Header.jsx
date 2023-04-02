@@ -1,11 +1,11 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useState } from "react";
+import NavItem from "../NavItem/NavItem";
 const Header = () => {
   const [menu, setMenu] = useState([]);
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuOpen = (value) => {
     setIsMenuOpen(value);
-    console.log(isMenuOpen);
   };
   useEffect(() => {
     fetch(`menu.json`)
@@ -22,28 +22,27 @@ const Header = () => {
       <nav>
         <div className="md:hidden">
           {isMenuOpen ? (
+            <XMarkIcon
+              className="w-10 h-10 text-rose-600 cursor-pointer"
+              onClick={() => menuOpen(!isMenuOpen)}
+            />
+          ) : (
             <Bars3Icon
               className="w-10 h-10 cursor-pointer"
               onClick={() => menuOpen(!isMenuOpen)}
             />
-          ) : (
-            <XMarkIcon
-              className="w-10 h-10 cursor-pointer"
-              onClick={() => menuOpen(!isMenuOpen)}
-            />
           )}
-          {/* <XMarkIcon /> */}
         </div>
         <div>
           <ul
-            className={`md:flex md:static justify-center absolute  duration-150 space-x-8 text-white bg-violet-400  text-lg ${
-              isMenuOpen ? "-top-48" : "top-20"
-            }`}
+            className={`${
+              isMenuOpen
+                ? "right-0 top-20 mt-2 px-5 duration-200"
+                : "-right-36 top-20 mt-2 hidden"
+            } md:flex md:static absolute  md:space-x-6 md:bg-violet-500 bg-violet-300 text-white text-xl`}
           >
             {menu.map((item) => (
-              <li key={item.id}>
-                <a href={item.url}>{item.name}</a>
-              </li>
+              <NavItem key={item.id} menu={item} />
             ))}
           </ul>
         </div>

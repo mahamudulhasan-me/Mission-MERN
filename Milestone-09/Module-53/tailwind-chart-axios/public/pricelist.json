@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "id": "001",
+      "name": "Basic",
+      "price": 19.99,
+      "features": [
+        "Wireless charging",
+        "Bluetooth connectivity",
+        "Water-resistant",
+        "Long battery life"
+      ]
+    },
+    {
+      "id": "002",
+      "name": "Premium",
+      "price": 29.99,
+      "features": [
+        "Noise-cancelling",
+        "Foldable design",
+        "Adjustable headband",
+        "High-quality audio"
+      ]
+    },
+    {
+      "id": "003",
+      "name": "Ultimate",
+      "price": 9.99,
+
+      "features": [
+        "Lightweight",
+        "In-line microphone",
+        "Tangle-free cord",
+        "Multiple ear tip sizes"
+      ]
+    }
+  ]
+}
