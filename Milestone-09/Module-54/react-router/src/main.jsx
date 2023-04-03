@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import About from "./components/About/About";
+import AllPosts from "./components/AllAboutPosts/AllPosts";
+import Post from "./components/AllAboutPosts/Post";
 import Contact from "./components/Contact/Contact";
 import FriendDetails from "./components/FriendDetails/FriendDetails";
 import Friends from "./components/Friends/Friends";
@@ -42,6 +44,19 @@ const router = createBrowserRouter([
       {
         path: "friends/:id",
         element: <FriendDetails />,
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
+      },
+      {
+        path: "posts",
+        element: <AllPosts />,
+        loader: () => fetch(`https://jsonplaceholder.typicode.com/posts`),
+      },
+      {
+        path: "/post/:postId",
+        element: <Post />,
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
       },
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },

@@ -1,12 +1,19 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
+    <nav>
       <ul>
         <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
           <Link to="./about">About</Link>
+        </li>
+        <li>
+          <Link to="./posts">Posts</Link>
         </li>
         <li>
           <Link to="./friends">Friends</Link>
@@ -19,7 +26,7 @@ const Header = () => {
         </li>
       </ul>
       <Outlet />
-    </div>
+    </nav>
   );
 };
 
