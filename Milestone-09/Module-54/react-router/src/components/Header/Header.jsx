@@ -1,32 +1,37 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
+import ActiveLink from "../ActiveLink/ActiveLink";
 import "./Header.css";
 
 const Header = () => {
+  const navigation = useNavigation();
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="./about">About</Link>
-        </li>
-        <li>
-          <Link to="./posts">Posts</Link>
-        </li>
-        <li>
-          <Link to="./friends">Friends</Link>
-        </li>
-        <li>
-          <Link to="./services">Services</Link>
-        </li>
-        <li>
-          <Link to="./contact">Contact</Link>
-        </li>
-      </ul>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <ActiveLink to="/">Home</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="./about">About</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="./posts">Posts</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="./friends">Friends</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="./services">Services</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="./contact">Contact</ActiveLink>
+          </li>
+        </ul>
+      </nav>
+      <p>{navigation.state === "loading" ? "Loading...." : ""}</p>
       <Outlet />
-    </nav>
+    </div>
   );
 };
 

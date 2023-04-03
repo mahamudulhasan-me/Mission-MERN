@@ -14,6 +14,7 @@ const AllPosts = () => {
             <h2>Post id: {post.id}</h2>
             <p key={post.id}>Title: {post.title}</p>
             <Link to={`/post/${post.id}`}>See Details</Link>
+            {/* <button onClick={handleNavigate}>See all postss</button> */}
           </div>
         );
       })}
