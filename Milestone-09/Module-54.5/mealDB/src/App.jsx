@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/About/About";
+import FoodDetails from "./components/Foods/FoodDetails";
+import Foods from "./components/Foods/Foods";
+import Header from "./components/Header/Header";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Restaurant from "./components/Restaurant/Restaurant";
 
-function App() {
-  const [count, setCount] = useState(0)
+const router = createBrowserRouter([
+  {
+    path: "",
+    element: <Header />,
+    children: [
+      {
+        path: "/",
+        element: <Foods />,
+      },
+      {
+        path: "food/:mealName",
+        element: <FoodDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://www.themealdb.com/api/json/v1/1/search.php?s=${params.mealName}`
+          ),
+      },
+      {
+        path: "restaurant",
+        element: <Restaurant />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+      {
+        path: "*",
+        element: <PageNotFound />,
+      },
+    ],
+  },
+]);
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
-export default App
+export default App;
