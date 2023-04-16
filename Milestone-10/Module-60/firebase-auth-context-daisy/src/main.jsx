@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
+import Profile from "./components/Profile";
 import Register from "./components/Register";
 import SignIn from "./components/SignIn";
 import "./index.css";
 import Main from "./layout/Main";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UserProvider from "./providers/UserProvider";
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "signIn",
         element: <SignIn />,
+      },
+      {
+        path: "profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
       },
     ],
   },

@@ -32,6 +32,12 @@ const Header = () => {
                   LogOut
                 </button>
               }
+              <Link
+                className="btn btn-ghost normal-case text-xl"
+                to={"/profile"}
+              >
+                Profile
+              </Link>
             </>
           ) : (
             <>

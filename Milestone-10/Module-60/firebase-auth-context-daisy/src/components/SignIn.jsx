@@ -11,7 +11,7 @@ const SignIn = () => {
     signIn(email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        console.log(user);
+        e.target.reset();
       })
       .catch((err) => console.error(err));
   };
