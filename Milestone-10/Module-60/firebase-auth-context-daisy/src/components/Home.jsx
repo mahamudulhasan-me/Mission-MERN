@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../providers/UserProvider";
 
 const Home = () => {
-  return <div></div>;
+  const user = useContext(UserContext);
+  return (
+    <div>
+      {user && <span>{user.displayName}</span>}'s reply to your comment.
+    </div>
+  );
 };
 
 export default Home;

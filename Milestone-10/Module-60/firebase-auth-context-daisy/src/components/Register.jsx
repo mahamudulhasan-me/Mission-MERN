@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../providers/UserProvider";
 
 const Register = () => {
+  const { user, createUser } = useContext(UserContext);
+  console.log(user);
   const registerHandler = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    createUser(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log(user);
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div className="px-[16%]">
@@ -29,8 +41,7 @@ const Register = () => {
                 <input
                   type="text"
                   name="name"
-                  required
-                  placeholder="email"
+                  placeholder="name"
                   className="input input-bordered"
                 />
                 <label className="label">

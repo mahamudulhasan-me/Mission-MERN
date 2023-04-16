@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../providers/UserProvider";
 
 const SignIn = () => {
+  const { signIn } = useContext(UserContext);
   const loginHandler = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    signIn(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log(user);
+      })
+      .catch((err) => console.error(err));
   };
   return (
     <div className="px-[16%]">
