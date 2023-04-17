@@ -47,6 +47,9 @@ const Header = () => {
               </Link>
             </>
           )}
+          <Link className="btn btn-ghost normal-case text-xl" to={"/products"}>
+            Products
+          </Link>
         </p>
       </div>
     </nav>
