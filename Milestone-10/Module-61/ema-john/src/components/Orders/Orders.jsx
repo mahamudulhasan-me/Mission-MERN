@@ -33,12 +33,6 @@ const Orders = () => {
         </div>
       </div>
       <Cart clearCart={clearCart} cart={cart} />
-      <button className=" bg-orange-500 text-white text-lg py-2">
-        <Link to={"/checkout"}>
-          CheckOut Product
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </Link>
-      </button>
     </div>
   );
 };

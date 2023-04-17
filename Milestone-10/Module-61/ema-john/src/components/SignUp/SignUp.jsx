@@ -1,6 +1,41 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { AuthProviderContext } from "../AuthProvider/AuthProvider";
 
 const SignUp = () => {
+  const [error, setError] = useState("");
+  const { signUp } = useContext(AuthProviderContext);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirmPassword = form.confirmPassword.value;
+    console.log(email, password, confirmPassword);
+    setError(null);
+    if (password !== confirmPassword) {
+      setError("Password not matching");
+      return;
+    } else if (password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    } else if (!/(?=.*[A-Z])/.test(password)) {
+      setError("At least a capital letter must be");
+    } else if (!/(?=.*[!@#$%^&*])/.test(password)) {
+      setError("At lest one special character must be");
+      return;
+    } else {
+      alert("Account Create Successfully");
+    }
+    signUp(email, password)
+      .then((userCredentials) => {
+        e.target.reset();
+        console.log(userCredentials.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div className="hero  mx-auto px-[20%] h-[calc(100vh-60px)]">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -13,7 +48,7 @@ const SignUp = () => {
           </p>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body">
+          <form onSubmit={handleSignUp} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -53,10 +88,25 @@ const SignUp = () => {
                 </a>
               </label>
             </div>
+            <p className="text-rose-500">{error}</p>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
-          </div>
+            <p className="text-center">
+              Already have an Account?{" "}
+              <Link to={"/login"} className="text-orange-500 underline">
+                Log in
+              </Link>
+            </p>
+            <div className="flex justify-center items-center gap-3">
+              <div className="w-full h-0.5 bg-slate-400"></div>
+              <p>or</p>
+              <div className="w-full h-0.5 bg-slate-400"></div>
+            </div>
+            <Link className="border border-slate-400 rounded-md p-3 text-center">
+              <p>Continue With Google</p>
+            </Link>
+          </form>
         </div>
       </div>
     </div>

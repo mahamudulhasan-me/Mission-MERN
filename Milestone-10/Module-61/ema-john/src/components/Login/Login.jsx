@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthProviderContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthProviderContext);
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIn(email, password)
+      .then((userCredentials) => {
+        console.log(userCredentials.user);
+        e.target.reset();
+      })
+      .catch((err) => console.error(err));
+  };
   return (
     <div className="hero  mx-auto px-[20%] h-[calc(100vh-60px)]">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -13,7 +29,7 @@ const Login = () => {
           </p>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body">
+          <form onSubmit={handleSignIn} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -46,7 +62,21 @@ const Login = () => {
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
-          </div>
+            <p className="text-center">
+              New to ema-john?{" "}
+              <Link to={"/sign-up"} className="text-orange-500 underline">
+                Create new account
+              </Link>
+            </p>
+            <div className="flex justify-center items-center gap-3">
+              <div className="w-full h-0.5 bg-slate-400"></div>
+              <p>or</p>
+              <div className="w-full h-0.5 bg-slate-400"></div>
+            </div>
+            <Link className="border border-slate-400 rounded-md p-3 text-center">
+              <p>Continue With Google</p>
+            </Link>
+          </form>
         </div>
       </div>
     </div>
