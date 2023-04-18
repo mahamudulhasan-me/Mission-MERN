@@ -6,7 +6,6 @@ const getAddedItems = async () => {
 
   const storedCart = getProductFromDB();
   let saveCart = [];
-  console.log(storedCart);
   for (let id in storedCart) {
     const findProduct = products.find((product) => product.id === id);
     if (findProduct) {

@@ -1,10 +1,17 @@
-import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../AuthProvider/AuthProvider";
 
 const Login = () => {
   const { signIn } = useContext(AuthProviderContext);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
+
+  //set redirect location
+  const location = useLocation();
+  console.log(location);
+  const redirectTo = location.state ? location.state : "/";
+
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,12 +20,12 @@ const Login = () => {
 
     signIn(email, password)
       .then((userCredentials) => {
-        console.log(userCredentials.user);
         e.target.reset();
-        navigate("/");
+        navigate(redirectTo);
       })
       .catch((err) => console.error(err));
   };
+  const handlePassShow = () => setShow(true);
   return (
     <div className="hero  mx-auto px-[20%] h-[calc(100vh-60px)]">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -49,16 +56,16 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={show ? "text" : "password"}
                 name="password"
                 required
                 placeholder="password"
                 className="input input-bordered"
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
+              <label className="label" onClick={handlePassShow}>
+                <p className="label-text-alt link link-hover">
+                  {show ? "Hide" : "Show"}
+                </p>
               </label>
             </div>
             <div className="form-control mt-6">

@@ -1,18 +1,22 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../AuthProvider/AuthProvider";
 
 const SignUp = () => {
   const [error, setError] = useState("");
   const { signUp } = useContext(AuthProviderContext);
+  const navigate = useNavigate();
   const handleSignUp = (e) => {
     e.preventDefault();
+    // get value form input field
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
-    console.log(email, password, confirmPassword);
+
+    // set error null for default
     setError(null);
+    // check some password validation
     if (password !== confirmPassword) {
       setError("Password not matching");
       return;
@@ -29,8 +33,8 @@ const SignUp = () => {
     }
     signUp(email, password)
       .then((userCredentials) => {
+        navigate("/");
         e.target.reset();
-        console.log(userCredentials.user);
       })
       .catch((error) => {
         console.error(error);
