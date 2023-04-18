@@ -5,6 +5,7 @@ import { AuthProviderContext } from "../AuthProvider/AuthProvider";
 const Login = () => {
   const { signIn } = useContext(AuthProviderContext);
   const [show, setShow] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   //set redirect location
@@ -23,9 +24,9 @@ const Login = () => {
         e.target.reset();
         navigate(redirectTo);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => setError(err.message));
   };
-  const handlePassShow = () => setShow(true);
+
   return (
     <div className="hero  mx-auto px-[20%] h-[calc(100vh-60px)]">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -62,12 +63,14 @@ const Login = () => {
                 placeholder="password"
                 className="input input-bordered"
               />
-              <label className="label" onClick={handlePassShow}>
+              <label className="label" onClick={() => setShow(!show)}>
                 <p className="label-text-alt link link-hover">
+                  {/* {show ? <span>Hide</span> : <span>Show</span>} */}
                   {show ? "Hide" : "Show"}
                 </p>
               </label>
             </div>
+            <p className="text-rose-500">{error.slice(10)}</p>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
