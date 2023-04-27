@@ -21,7 +21,6 @@ app.get("/news", (req, res) => {
 // news find by id
 app.get("/news/:id", (req, res) => {
   const id = req.params.id;
-  console.log(id);
   const newsById = allNews.find((news) => news._id === id);
   res.send(newsById);
 });
