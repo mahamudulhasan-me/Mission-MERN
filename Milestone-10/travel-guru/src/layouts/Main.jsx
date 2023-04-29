@@ -1,13 +1,15 @@
 import React from "react";
 import banner from "../assets/Banner.png";
-import Home from "../components/Home/Home";
+import Banner from "../components/Banner/Banner";
+import Header from "../components/shared/Header";
 const Main = () => {
   return (
     <div
       style={{ backgroundImage: `url(${banner})` }}
-      className="bg-slate-800 bg-blend-overlay bg-right-top bg-no-repeat bg-cover"
+      className="bg-slate-800 bg-blend-overlay bg-right-top bg-no-repeat bg-cover h-screen"
     >
-      <Home />
+      <Header />
+      <Banner />
     </div>
   );
 };
