@@ -3,7 +3,7 @@ import Header from "../shared/Header";
 
 const Home = () => {
   return (
-    <div>
+    <div className="h-screen">
       <Header />
     </div>
   );
