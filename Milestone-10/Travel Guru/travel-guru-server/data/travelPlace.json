@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Bali, Indonesia",
+    "image": "https://rb.gy/sbvzu",
+    "details": "Bali is an Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs. The island is home to religious sites such as cliffside Uluwatu Temple. To the south, the beachside city of Kuta has lively bars, while Seminyak, Sanur and Nusa Dua are popular resort towns. The island is also known for its yoga and meditation retreats."
+  },
+  {
+    "id": "2",
+    "name": "Santorini, Greece",
+    "image": "https://rb.gy/hlnrl",
+    "details": "Santorini is a volcanic island in the Cyclades group of the Greek islands. It is famous for its dramatic views, stunning sunsets from Oia town, the strange white aubergine (eggplant), the town of Thira and naturally its very own active volcano."
+  },
+  {
+    "id": "3",
+    "name": "Machu Picchu, Peru",
+    "image": "https://rb.gy/oaoi6",
+    "details": "Machu Picchu is a 15th-century Inca citadel situated on a mountain ridge 2,430 metres above sea level in Peru. It is one of the most iconic archaeological sites in the world and is a UNESCO World Heritage site. It is believed that the site was constructed as an estate for the Inca emperor Pachacuti."
+  },
+  {
+    "id": "4",
+    "name": "Sydney, Australia",
+    "image": "https://rb.gy/xslmx",
+    "details": "Sydney is the largest city in Australia, famous for its harbour, beaches, and iconic landmarks such as the Sydney Opera House and the Harbour Bridge. The city also has many museums, galleries, and parks to explore, as well as a thriving food and drink scene. It's a great destination for both nature lovers and urban explorers."
+  },
+  {
+    "id": "5",
+    "name": "New York City, USA",
+    "image": "https://rb.gy/qawr2",
+    "details": "New York City, also known as the 'Big Apple', is a bustling metropolis famous for its skyscrapers, Central Park, Times Square, and the Statue of Liberty. The city is a melting pot of cultures and has something for everyone, from world-class museums and Broadway shows to diverse cuisine and vibrant nightlife."
+  },
+  {
+    "id": "6",
+    "name": "Phuket, Thailand",
+    "image": "https://rb.gy/upi2i",
+    "details": "Phuket is a popular beach destination in Thailand, known for its crystal-clear waters, white-sand beaches, and lush green hills. The island is also home to many temples, cultural sites, and a lively nightlife scene. Visitors can enjoy a variety of water sports, take a boat tour to nearby islands, or simply relax and soak up the sun."
+  }
+]
