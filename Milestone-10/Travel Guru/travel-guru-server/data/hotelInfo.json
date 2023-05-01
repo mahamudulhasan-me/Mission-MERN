@@ -2,6 +2,7 @@
   {
     "id": "1",
     "room_name": "Luxury Suite at The Ritz Carlton",
+    "image": "https://rb.gy/fs0v8",
     "bedrooms": "1",
     "bathrooms": "1",
     "wifi": true,
@@ -10,11 +11,12 @@
     "cancellation_flexibility": true,
     "rating": 4.5,
     "total_rating": 150,
-    "price": "$500 per night"
+    "price": "$500"
   },
   {
     "id": "2",
     "room_name": "Two Bedroom Apartment with Balcony",
+    "image": "https://rb.gy/1ecvh",
     "bedrooms": "2",
     "bathrooms": "2",
     "wifi": true,
@@ -23,11 +25,12 @@
     "cancellation_flexibility": true,
     "rating": 4.2,
     "total_rating": 75,
-    "price": "$350 per night"
+    "price": "$350"
   },
   {
     "id": "3",
     "room_name": "Deluxe Ocean View Room",
+    "image": "https://rb.gy/je8zf",
     "bedrooms": "1",
     "bathrooms": "1",
     "wifi": true,
@@ -36,11 +39,12 @@
     "cancellation_flexibility": true,
     "rating": 4.7,
     "total_rating": 200,
-    "price": "$600 per night"
+    "price": "$600"
   },
   {
     "id": "4",
     "room_name": "Studio Apartment with Pool View",
+    "image": "https://rb.gy/xm3oh",
     "bedrooms": "1",
     "bathrooms": "1",
     "wifi": true,
@@ -49,6 +53,6 @@
     "cancellation_flexibility": false,
     "rating": 3.9,
     "total_rating": 50,
-    "price": "$250 per night"
+    "price": "$250"
   }
 ]
