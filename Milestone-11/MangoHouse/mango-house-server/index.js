@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-const { request } = require("express");
 const app = express();
 const port = process.env.PORT || 7070;
 
@@ -54,6 +53,27 @@ async function run() {
       const query = { _id: new ObjectId(id) };
       const result = await mangoCollections.findOne(query);
       res.send(result);
+    });
+
+    app.put("/mangos/:id", async (req, res) => {
+      const id = req.params.id;
+      const mango = req.body;
+
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updatedMango = {
+        $set: {
+          name: mango.name,
+          place: mango.place,
+          quantity: mango.quantity,
+        },
+      };
+      const updatedResult = await mangoCollections.updateOne(
+        filter,
+        updatedMango,
+        options
+      );
+      res.send(updatedResult);
     });
     // delete data from db
     app.delete("/mangos/:_id", async (req, res) => {
