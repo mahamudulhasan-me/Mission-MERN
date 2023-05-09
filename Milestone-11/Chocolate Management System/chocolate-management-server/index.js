@@ -1,9 +1,9 @@
 const express = require("express");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+require("dotenv").config();
 const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 7070;
-
 // middleware
 app.use(cors());
 app.use(express.json());
@@ -12,8 +12,7 @@ app.get("/", (req, res) => {
   res.send("Chocolate Management Server Now Running");
 });
 
-const uri =
-  "mongodb+srv://ExploreMongoDB:cMCjiFXOuTA0p7gZ@cluster0.beeiwwt.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASSWORD}@cluster0.beeiwwt.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -61,13 +60,19 @@ async function run() {
       const filter = { _id: new ObjectId(id) };
       const options = { upsert: true };
       const updatedChocolate = {
-        $set: {},
+        $set: {
+          name: chocolate.name,
+          image: chocolate.image,
+          country: chocolate.country,
+          category: chocolate.category,
+        },
       };
       const result = await chocolateCollection.updateOne(
         filter,
         updatedChocolate,
         options
       );
+      res.send(result);
     });
 
     //delete data from db
