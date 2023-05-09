@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply w-4/5 mx-auto;
+}
+.my-btn {
+  @apply w-36 font-semibold text-center rounded-sm py-3 px-5 transition-all duration-500 ease-in-out;
+}
+.myPrimary-btn {
+  @apply my-btn bg-primary text-white border border-primary;
+}
+.myOutline-btn {
+  @apply my-btn border border-primary text-primary;
+}
+.myPrimary-btn:hover {
+  @apply border border-primary text-primary bg-slate-950 transition-all duration-500 ease-in-out;
+}
+.myOutline-btn:hover {
+  @apply bg-slate-950 text-white transition-all  duration-500 ease-in-out;
+}
