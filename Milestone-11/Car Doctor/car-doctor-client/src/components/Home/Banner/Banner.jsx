@@ -1,5 +1,5 @@
 import React from "react";
-import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import banImg1 from "../../../assets/images/banner/1.jpg";
 // import banImg5 from "../../../assets/images/banner/6.jpg"
@@ -7,10 +7,10 @@ import banImg1 from "../../../assets/images/banner/1.jpg";
 const Banner = () => {
   return (
     <>
-      <div className="carousel w-full h-[calc(100vh-7.5rem)] mt-5">
-        <div id="slide1" className="carousel-item relative w-full">
+      <div className="carousel w-full h-[calc(100vh-7.5rem)] mt-5 rounded-lg">
+        <div id="slide1" className="carousel-item relative w-full ">
           <img src={banImg1} className="w-full" />
-          <div className="absolute pl-20 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)] left-0 top-0 right-0 bottom-0 flex items-center">
+          <div className="absolute pl-20 bg-gradient-to-r rounded-lg from-[#151515] to-[rgba(21, 21, 21, 0) 100%)] left-0 top-0 right-0 bottom-0 flex items-center">
             <div className="w-3/5 mt-8">
               <h2 className="text-6xl text-white font-semibold mb-5">
                 Affordable Price For Car Servicing
@@ -26,17 +26,11 @@ const Banner = () => {
             </div>
           </div>
           <div className="absolute flex justify-end gap-2 transform -translate-y-1/2 left-5 right-5 bottom-0">
-            <a
-              href="#slide2"
-              className="bg-primary bg-opacity-50  w-12 h-12 flex justify-center items-center text-white text-3xl rounded-full"
-            >
-              <BiArrowFromRight />
+            <a href="#slide2" className="slider-btn bg-primary bg-opacity-30">
+              <HiArrowLeft />
             </a>
-            <a
-              href="#slide4"
-              className="bg-primary w-12 h-12 flex justify-center items-center text-white text-3xl rounded-full"
-            >
-              <BiArrowFromLeft />
+            <a href="#slide4" className="slider-btn bg-primary">
+              <HiArrowRight />
             </a>
           </div>
         </div>

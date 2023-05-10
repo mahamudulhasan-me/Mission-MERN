@@ -6,7 +6,7 @@ body {
   @apply w-4/5 mx-auto;
 }
 .my-btn {
-  @apply w-36 font-semibold text-center rounded-sm py-3 px-5 transition-all duration-500 ease-in-out;
+  @apply min-w-min font-semibold text-center rounded-sm py-3 px-5 transition-all duration-500 ease-in-out;
 }
 .myPrimary-btn {
   @apply my-btn bg-primary text-white border border-primary;
@@ -19,4 +19,8 @@ body {
 }
 .myOutline-btn:hover {
   @apply bg-slate-950 text-white transition-all  duration-500 ease-in-out;
+}
+
+.slider-btn {
+  @apply w-12 h-12 flex justify-center items-center text-white text-xl font-thin rounded-full;
 }
