@@ -5,7 +5,7 @@ const CheckoutBanner = ({ title, pathName }) => {
   return (
     <div className="relative overflow-hidden">
       <di
-        className="absolute  flex justify-center items-center bg-primary z-50 bottom-0 left-1/2 text-white font-semibold w-48 h-10
+        className="absolute  flex justify-center items-center bg-primary z-50 bottom-0 left-[40%] text-white font-semibold w-48 h-10
        before:absolute before:content-[''] before:bg-primary before:-bottom-4 before:-rotate-45 before:w-16 before:h-10 before: before:-left-10  before:z-10
        after:absolute after:content-['] after:bg-primary after:-bottom-4 after:rotate-45 after:w-16 after:h-10 after:-right-10 after:z-10"
       >
