@@ -7,39 +7,10 @@ import {
   FaUserCog,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
 
-const InfoCard = ({ appointInfo, setAppointState, appointState }) => {
-  const { _id, name, img, email, phone, date, price } = appointInfo;
+const InfoCard = ({ appointInfo, handleDelete, handleConfirm }) => {
+  const { _id, name, img, email, phone, date, price, status } = appointInfo;
 
-  const handleDelete = (_id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:5050/appointment/${_id}`, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
-              const remainingAppointments = appointState.filter(
-                (appoint) => appoint._id !== _id
-              );
-              setAppointState(remainingAppointments);
-            }
-          });
-      }
-    });
-  };
   return (
     <div className="flex justify-between items-center font-semibold bg-[#f3f3f3] p-2 rounded-md ">
       <div className="flex justify-between items-center gap-4">
@@ -62,7 +33,25 @@ const InfoCard = ({ appointInfo, setAppointState, appointState }) => {
       </div>
       <p className="text-xl">${price}</p>
       <p className="text-xl">{date}</p>
-      <div className="myPrimary-btn">Pending</div>
+      {status === "confirm" ? (
+        <div
+          className="myPrimary-btn"
+          onClick={() => {
+            handleConfirm(_id);
+          }}
+        >
+          Confirm
+        </div>
+      ) : (
+        <div
+          className="myPrimary-btn"
+          onClick={() => {
+            handleConfirm(_id);
+          }}
+        >
+          Pending
+        </div>
+      )}
     </div>
   );
 };

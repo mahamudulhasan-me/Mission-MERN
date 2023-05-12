@@ -5,11 +5,11 @@ const AboutUs = () => {
   return (
     <div className="flex justify-between  my-28  items-stretch">
       <div className="w-2/5 relative">
-        <img src={aboutPerson} alt="" className="h-full" />
+        <img src={aboutPerson} alt="" className="h-full rounded-lg" />
         <img
           src={aboutParts}
           alt=""
-          className="absolute left-1/2 top-1/2 w-72 h-72 p-2 bg-white rounded-md border"
+          className=" absolute left-1/2 top-1/2 w-72 h-72 p-2 bg-white rounded-md border"
         />
       </div>
 

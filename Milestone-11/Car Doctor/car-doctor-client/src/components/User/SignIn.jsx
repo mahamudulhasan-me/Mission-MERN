@@ -17,9 +17,22 @@ const SignIn = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        toast.success(`Welcome ${user.displayName}`);
-        navigate("/");
+        const userInfo = {
+          uid: user.uid,
+        };
+        fetch(`http://localhost:5050/jwt`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(userInfo),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            localStorage.setItem("car-access-token", data.token);
+            toast.success(`Welcome ${user.displayName}`);
+            navigate("/");
+          });
       })
       .catch((err) => console.error(err));
   };
