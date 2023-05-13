@@ -1,14 +1,44 @@
-import React from "react";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
+import React, { useContext, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { AuthContext } from "../../provider/AuthProvider";
+import SocialSignIn from "../Shared/SocialSignIn/SocialSignIn";
 
 const SignUp = ({ signUpPage, setSignUpPage }) => {
+  const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const path = location?.state?.from?.pathname || "/";
+
+  const handleSignUp = (e) => {
+    console.log(e);
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        console.log(user);
+        updateProfile(user, { displayName: name })
+          .then((user) => {
+            toast.success("User Create Successfully");
+            navigate(path);
+          })
+          .catch((error) => setError(error));
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
   return (
     <div>
-      {" "}
       <h1 className="text-center text-4xl font-bold">Sign Up</h1>
-      <form className="space-y-5">
+      <form onSubmit={handleSignUp} className="space-y-5">
         <div>
           <label className="text-lg font-semibold" htmlFor="name">
             Name
@@ -48,31 +78,10 @@ const SignUp = ({ signUpPage, setSignUpPage }) => {
             placeholder="Your Password"
           />
         </div>
-        <input type="button" value="Sign Up" className="w-full myPrimary-btn" />
+        <p className="font-semibold text-rose-600">{error}</p>
+        <input type="submit" value="Sign Up" className="w-full myPrimary-btn" />
       </form>
-      <div className="text-center font-semibold mt-8">
-        <p>Or Sign In with</p>
-        <div className="flex justify-center space-x-3 text-xl mt-3 mb-5 ">
-          <Link className="bg-[#f3f3f3] p-3 rounded-full text-[#4267B2]">
-            <FaFacebookF />
-          </Link>
-          <Link className="bg-[#f3f3f3] p-3 rounded-full text-[#0A66C2]">
-            <FaLinkedinIn />
-          </Link>
-          <Link className="bg-[#f3f3f3] p-3 rounded-full ">
-            <FcGoogle />
-          </Link>
-        </div>
-        <p>
-          Haven&apos;t account?{" "}
-          <Link
-            onClick={() => setSignUpPage(!signUpPage)}
-            className="text-primary font-bold"
-          >
-            Sign Up
-          </Link>
-        </p>
-      </div>
+      <SocialSignIn signUpPage={signUpPage} setSignUpPage={setSignUpPage} />
     </div>
   );
 };

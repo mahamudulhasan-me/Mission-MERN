@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
 import CheckoutBanner from "../Shared/CheckoutBanner/CheckoutBanner";
@@ -7,17 +8,23 @@ import InfoCard from "../Shared/InfoCard/InfoCard";
 const AppointmentInfo = () => {
   const [appointInfo, setAppointInfo] = useState([]);
   const { user } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const url = `http://localhost:5050/appointment?uid=${user.uid}`;
   useEffect(() => {
     fetch(url, {
       method: "GET",
       headers: {
-        authorization: `Bearer ${localStorage.getItem("car-access-token")}`,
+        authentication: `Bearer ${localStorage.getItem("car-access-token")}`,
       },
     })
       .then((response) => response.json())
-      .then((data) => setAppointInfo(data));
+      .then((data) => {
+        if (!data.error) {
+          setAppointInfo(data);
+        } else {
+          navigate("/");
+        }
+      });
   }, [url]);
 
   const handleDelete = (_id) => {
@@ -74,7 +81,7 @@ const AppointmentInfo = () => {
     <div>
       <CheckoutBanner title="Appointment Details" pathName="Appoint" />
       <div className="my-20 space-y-6">
-        {appointInfo.map((appoint) => (
+        {appointInfo?.map((appoint) => (
           <InfoCard
             handleDelete={handleDelete}
             handleConfirm={handleConfirmStatus}

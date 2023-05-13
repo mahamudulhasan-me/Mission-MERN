@@ -8,7 +8,6 @@ const Header = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        localStorage.removeItem("car-access-token");
         toast.warning("User Logged Out");
       })
       .catch((err) => {
