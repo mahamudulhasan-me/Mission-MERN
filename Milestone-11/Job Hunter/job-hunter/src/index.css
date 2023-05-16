@@ -8,3 +8,6 @@ body {
 .job-post-input {
   @apply bg-gray-300 py-3 rounded-md px-2 text-black font-semibold focus:outline outline-rose-700 placeholder-fuchsia-600 text-xl;
 }
+.type-btn {
+  @apply px-8 py-3 rounded-md  border-2 border-rose-600 text-white;
+}

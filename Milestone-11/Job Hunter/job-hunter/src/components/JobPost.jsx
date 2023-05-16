@@ -9,9 +9,23 @@ const animatedComponents = makeAnimated();
 const JobPost = () => {
   const [selectOptions, setSelectOptions] = useState([]);
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    data.skill = selectOptions;
-    console.log(data);
+
+  const onSubmit = (jobDetails) => {
+    jobDetails.skill = selectOptions;
+    fetch(`http://localhost:4040/jobPost`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(jobDetails),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("Job post successfully");
+        }
+      });
+    console.log(jobDetails);
   };
 
   const colourOptions = [

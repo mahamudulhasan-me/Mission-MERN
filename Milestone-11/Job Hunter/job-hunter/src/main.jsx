@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
-import JobPost from "./components/JobPost.jsx";
+import Alljobs from "./components/Alljobs.jsx";
+import Home from "./components/Home.jsx";
+import MyJobs from "./components/MyJobs.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -12,7 +14,16 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <JobPost />,
+        element: <Home />,
+      },
+      {
+        path: "alljobs",
+        element: <Alljobs />,
+      },
+      {
+        path: "myjobs",
+        element: <MyJobs />,
+        loader: () => fetch(`http://localhost:4040/myjobs`),
       },
     ],
   },

@@ -4,10 +4,13 @@ const Header = () => {
   const navOptions = (
     <>
       <li>
-        <Link>Job Post</Link>
+        <Link to={"/"}>Job Post</Link>
       </li>
       <li>
-        <Link>My Job</Link>
+        <Link to={"/alljobs"}>All Jobs</Link>
+      </li>
+      <li>
+        <Link to={"/myjobs"}>My Job</Link>
       </li>
     </>
   );
@@ -38,7 +41,9 @@ const Header = () => {
             {navOptions}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link to={"/"} className="btn btn-ghost normal-case text-xl">
+          Job Hunter
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navOptions}</ul>
