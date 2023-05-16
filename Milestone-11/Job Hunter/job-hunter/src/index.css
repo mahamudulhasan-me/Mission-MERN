@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply w-4/5 mx-auto;
+}
+.job-post-input {
+  @apply bg-gray-300 py-3 rounded-md px-2 text-black font-semibold focus:outline outline-rose-700 placeholder-fuchsia-600 text-xl;
+}
