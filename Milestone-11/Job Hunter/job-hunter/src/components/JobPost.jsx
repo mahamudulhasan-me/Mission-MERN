@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
+import { AuthContext } from "../provider/AuthProvider";
 
 const animatedComponents = makeAnimated();
 
 const JobPost = () => {
   const [selectOptions, setSelectOptions] = useState([]);
   const { register, handleSubmit } = useForm();
+  const { user } = useContext(AuthContext);
 
   const onSubmit = (jobDetails) => {
     jobDetails.skill = selectOptions;
+    jobDetails.userID = user.uid;
+
     fetch(`http://localhost:4040/jobPost`, {
       method: "POST",
       headers: {
@@ -95,6 +99,7 @@ const JobPost = () => {
           type="email"
           {...register("email")}
           placeholder="email"
+          defaultValue={user?.email}
           className="job-post-input col-span-5"
         />
         <textarea

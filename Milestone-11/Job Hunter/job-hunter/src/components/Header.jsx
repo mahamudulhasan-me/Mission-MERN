@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => alert("Logged out"))
+      .catch((err) => console.log(err));
+  };
   const navOptions = (
     <>
       <li>
@@ -10,7 +18,7 @@ const Header = () => {
         <Link to={"/alljobs"}>All Jobs</Link>
       </li>
       <li>
-        <Link to={"/myjobs"}>My Job</Link>
+        <Link to={`/myjobs/${user.uid}`}>My Job</Link>
       </li>
     </>
   );
@@ -49,7 +57,15 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">{navOptions}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Get started</a>
+        {user ? (
+          <Link onClick={handleLogout} to={"/signin"} className="btn">
+            Log Out
+          </Link>
+        ) : (
+          <Link to={"/signin"} className="btn">
+            Sign In
+          </Link>
+        )}
       </div>
     </div>
   );

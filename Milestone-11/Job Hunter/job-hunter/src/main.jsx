@@ -5,7 +5,10 @@ import App from "./App.jsx";
 import Alljobs from "./components/Alljobs.jsx";
 import Home from "./components/Home.jsx";
 import MyJobs from "./components/MyJobs.jsx";
+import SignIn from "./components/SignIn/SignIn.jsx";
+import SignInLayout from "./components/SignIn/SignInLayout.jsx";
 import "./index.css";
+import AuthProvider from "./provider/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,9 +24,20 @@ const router = createBrowserRouter([
         element: <Alljobs />,
       },
       {
-        path: "myjobs",
+        path: "myjobs/:userId",
         element: <MyJobs />,
-        loader: () => fetch(`http://localhost:4040/myjobs`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:4040/myjobs/${params.userId}`),
+      },
+    ],
+  },
+  {
+    path: "/signin",
+    element: <SignInLayout />,
+    children: [
+      {
+        path: "/signin",
+        element: <SignIn />,
       },
     ],
   },
@@ -31,6 +45,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

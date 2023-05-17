@@ -1,7 +1,9 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import app from "../firebase/firebase.config";
 const MyJobs = () => {
   const myJobs = useLoaderData();
+  const a = app;
   return (
     <div className="my-10">
       <div className="flex justify-center items-center gap-2 mb-10">
