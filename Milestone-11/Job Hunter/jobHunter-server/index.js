@@ -36,6 +36,12 @@ async function run() {
     // create job post collection
     const jobPostCollection = jobHunterDB.collection("jobPost");
 
+    // ===========================================================
+    // create index
+    const indexKey = { title: 1, category: 1 };
+    const indexOption = { name: "titleCategory" };
+    jobPostCollection.createIndex(indexKey, indexOption);
+
     // add job post on db
     app.post("/jobPost", async (req, res) => {
       req.body.createdAt = new Date();
@@ -63,8 +69,10 @@ async function run() {
         res.send(result);
       }
     });
-    app.get("/myjobs", async (req, res) => {
-      const result = await jobPostCollection.find().toArray();
+    app.get("/myjobs/:userId", async (req, res) => {
+      const userId = req?.params?.userId;
+      const query = { userID: userId };
+      const result = await jobPostCollection.find(query).toArray();
       res.send(result);
     });
 
