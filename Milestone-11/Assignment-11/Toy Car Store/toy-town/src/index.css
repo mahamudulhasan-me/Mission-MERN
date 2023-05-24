@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-poppins;
+}
+.nav li {
+  @apply hover:bg-sec mx-1 duration-200 ease-out hover:ease-in px-4 py-2 rounded-md relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+.social-btn {
+  @apply transition-all duration-300 w-9 h-9 border-2 border-gray-400 rounded-full flex justify-center items-center;
+}
+.toyAdd-form {
+  @apply bg-[#E9EDF4] w-full px-2 h-10 rounded-md outline-none focus:border border-pri;
+}
+.footer ul li {
+  @apply hover:text-pri cursor-pointer;
+}
+.gallery-overly {
+  @apply flex justify-center items-center absolute left-1/2 right-1/2 bottom-1/2 top-1/2 duration-500 bg-slate-950 bg-opacity-10 group-hover:top-0 group-hover:left-0 group-hover:right-0 group-hover:bottom-0;
+}

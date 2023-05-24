@@ -24,10 +24,8 @@ const router = createBrowserRouter([
         element: <Alljobs />,
       },
       {
-        path: "myjobs/:userId",
+        path: "myjobs",
         element: <MyJobs />,
-        loader: ({ params }) =>
-          fetch(`http://localhost:4040/myjobs/${params.userId}`),
       },
     ],
   },

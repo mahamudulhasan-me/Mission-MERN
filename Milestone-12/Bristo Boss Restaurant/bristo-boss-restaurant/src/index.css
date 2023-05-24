@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply max-w-[85rem] mx-auto font-inter;
+}
+
+.my-menu li {
+  @apply min-w-fit px-3 py-2 mx-auto duration-500  rounded-md hover:bg-slate-950 hover:bg-opacity-50 uppercase text-sm font-cinzel;
+}
+.banner {
+  @apply h-screen;
+}
+.carousel .thumbs-wrapper {
+  margin-left: 32% !important;
+}
+.sub-menu {
+  @apply p-2 mt-10 absolute top-4 group-hover:transition-all group-hover:duration-500 left-1 bg-opacity-80 border-t border-yell  bg-slate-950 w-40 divide-y text-left;
+}
+.sub-menu li {
+  @apply border-b border-slate-950;
+}
+.menu-tab li {
+  @apply hover:text-yell  border-b hover:border-yell transition-all;
+}
+.active-tab {
+  @apply text-yell border-b  border-yell transition-all;
+}

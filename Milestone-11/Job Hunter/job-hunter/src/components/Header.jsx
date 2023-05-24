@@ -6,7 +6,10 @@ const Header = () => {
 
   const handleLogout = () => {
     logOut()
-      .then(() => alert("Logged out"))
+      .then(() => {
+        alert("Logged out");
+        localStorage.removeItem("jobHunter-token");
+      })
       .catch((err) => console.log(err));
   };
   const navOptions = (
@@ -18,7 +21,7 @@ const Header = () => {
         <Link to={"/alljobs"}>All Jobs</Link>
       </li>
       <li>
-        <Link to={`/myjobs/${user.uid}`}>My Job</Link>
+        <Link to={`/myjobs`}>My Job</Link>
       </li>
     </>
   );

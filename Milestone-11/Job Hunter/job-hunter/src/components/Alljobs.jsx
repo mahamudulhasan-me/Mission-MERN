@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { MagnifyingGlass } from "react-loader-spinner";
 import Job from "./Job";
 
 const Alljobs = () => {
   const [jobs, setJobs] = useState([]);
+  const [loadJob, setLoadJob] = useState(true);
   const [type, setType] = useState("allJobs");
   useEffect(() => {
     fetch(`http://localhost:4040/alljobs/${type}`)
       .then((response) => response.json())
-      .then((data) => setJobs(data));
+      .then((data) => {
+        setJobs(data);
+        setLoadJob(false);
+      });
   }, [type]);
   return (
     <div className="mt-10">
@@ -38,9 +43,26 @@ const Alljobs = () => {
         </button>
       </div>
       <div className="grid grid-cols-2 gap-8 ">
-        {jobs.map((job) => (
-          <Job key={job._id} job={job} />
-        ))}
+        {loadJob ? (
+          <div className="flex justify-center py-10">
+            <MagnifyingGlass
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="MagnifyingGlass-loading"
+              wrapperStyle={{}}
+              wrapperClass="MagnifyingGlass-wrapper"
+              glassColor="#c0efff"
+              color="#e15b64"
+            />
+          </div>
+        ) : (
+          <>
+            {jobs.map((job) => (
+              <Job key={job._id} job={job} />
+            ))}
+          </>
+        )}
       </div>
     </div>
   );
