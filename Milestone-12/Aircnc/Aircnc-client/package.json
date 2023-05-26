@@ -1,5 +1,5 @@
 {
-  "name": "bristo-boss-restaurant",
+  "name": "aircnc-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,22 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@smastrom/react-rating": "^1.3.1",
-    "daisyui": "^2.51.6",
-    "firebase": "^9.22.0",
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
+    "date-fns": "^2.30.0",
+    "firebase": "^9.22.1",
+    "query-string": "^8.1.0",
     "react": "^18.2.0",
+    "react-date-range": "^1.4.0",
     "react-dom": "^18.2.0",
-    "react-helmet-async": "^1.3.0",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.8.0",
-    "react-parallax": "^3.5.1",
-    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2",
-    "react-simple-captcha": "^9.0.2",
-    "react-toastify": "^9.1.3",
-    "sort-by": "^1.2.0",
-    "swiper": "^9.3.2"
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

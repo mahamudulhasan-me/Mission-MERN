@@ -1,8 +1,17 @@
-import React, { useState } from "react";
-import { FaAngleDown } from "react-icons/fa";
+import React, { useContext, useState } from "react";
+import { FaAngleDown, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { AuthContext } from "../../../provider/AuthProvider";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  console.log({ user });
+  const handleLogout = () => {
+    logOut()
+      .then(() => toast.warning("Logged out"))
+      .catch((err) => toast.error(err.message));
+  };
   const navItems = (
     <>
       <li>
@@ -56,6 +65,32 @@ const Header = () => {
       <li>
         <Link>Our Shop</Link>
       </li>
+      <Link>
+        <FaCartPlus className="text-xl" />
+      </Link>
+      {user ? (
+        <>
+          <div className="w-10 h-10 ring rounded-full ring-yell">
+            <img
+              src={user?.photoURL}
+              alt=""
+              title={user?.displayName}
+              className="w-full rounded-full"
+            />
+          </div>
+          <Link onClick={handleLogout}>
+            <button className="bg-yell px-3 py-2 rounded-md font-cinzel font-semibold">
+              Log out
+            </button>
+          </Link>
+        </>
+      ) : (
+        <Link to={"./login"}>
+          <button className="bg-yell px-3 py-2 rounded-md font-cinzel font-semibold">
+            Log in
+          </button>
+        </Link>
+      )}
     </>
   );
   return (
@@ -94,8 +129,10 @@ const Header = () => {
             <span className="text-xl tracking-[0.3rem]">Restaurant</span>
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="my-menu menu-horizontal space-x-2">{navItems}</ul>
+        <div className="navbar-center hidden lg:flex ">
+          <ul className="my-menu menu-horizontal space-x-2 flex items-center">
+            {navItems}
+          </ul>
         </div>
       </div>
     </div>

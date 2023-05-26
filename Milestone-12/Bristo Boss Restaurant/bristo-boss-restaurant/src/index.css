@@ -28,3 +28,12 @@ body {
 .active-tab {
   @apply text-yell border-b  border-yell transition-all;
 }
+.login label {
+  @apply font-cinzel font-semibold mb-2;
+}
+.login input {
+  @apply w-full h-10 p-2 outline-none focus:outline-yell  rounded-md;
+}
+.social-login-icon {
+  @apply w-8 h-8 border-2 border-slate-600 rounded-full p-1 hover:text-yell hover:border-yell duration-150 transition-all;
+}
