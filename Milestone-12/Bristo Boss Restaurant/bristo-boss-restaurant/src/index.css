@@ -37,3 +37,10 @@ body {
 .social-login-icon {
   @apply w-8 h-8 border-2 border-slate-600 rounded-full p-1 hover:text-yell hover:border-yell duration-150 transition-all;
 }
+.dashboard-item ul li:hover {
+  @apply text-white bg-slate-900 bg-opacity-40 rounded-lg;
+}
+
+.menu a:active {
+  @apply bg-slate-900 bg-opacity-80 rounded-lg;
+}

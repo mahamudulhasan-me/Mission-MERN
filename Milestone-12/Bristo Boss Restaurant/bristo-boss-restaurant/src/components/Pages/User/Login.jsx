@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   LoadCanvasTemplateNoReload,
   loadCaptchaEnginge,
@@ -30,6 +30,9 @@ const Login = () => {
   }, []);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+  const path = location.state?.from?.pathname || "/";
   // handle login
   const handleLogin = (e) => {
     e.preventDefault();
@@ -41,7 +44,7 @@ const Login = () => {
         .then((result) => {
           const user = result.user;
           toast.success(`Welcome ${user.displayName}`);
-          navigate("/");
+          navigate(path);
         })
         .catch((error) => setError(error.message));
     }
@@ -102,7 +105,7 @@ const Login = () => {
             </p>
           </form>
           <div className="flex justify-center items-center">
-            <SocialSignin />
+            <SocialSignin path={path} />
           </div>
         </div>
       </div>

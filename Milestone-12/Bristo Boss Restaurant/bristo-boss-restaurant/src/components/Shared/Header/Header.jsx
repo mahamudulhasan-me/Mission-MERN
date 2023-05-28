@@ -2,10 +2,13 @@ import React, { useContext, useState } from "react";
 import { FaAngleDown, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import useCart from "../../../hooks/useCart";
 import { AuthContext } from "../../../provider/AuthProvider";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
+  console.log(cart);
   console.log({ user });
   const handleLogout = () => {
     logOut()
@@ -65,9 +68,16 @@ const Header = () => {
       <li>
         <Link>Our Shop</Link>
       </li>
-      <Link>
-        <FaCartPlus className="text-xl" />
+
+      <Link to={"/dashboard/my-cart"}>
+        <div className="indicator mx-2">
+          <span className="indicator-item badge badge-primary">
+            {cart.length || 0}
+          </span>
+          <FaCartPlus size={28} className="" />
+        </div>
       </Link>
+
       {user ? (
         <>
           <div className="w-10 h-10 ring rounded-full ring-yell">

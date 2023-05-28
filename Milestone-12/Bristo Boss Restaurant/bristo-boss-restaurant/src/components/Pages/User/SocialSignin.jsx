@@ -4,15 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../provider/AuthProvider";
 
-const SocialSignin = () => {
+const SocialSignin = ({ path }) => {
   const { logInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
+
   const handleGoogleLogIn = () => {
     logInWithGoogle()
       .then((result) => {
         const user = result.user;
         toast.success(`Welcome ${user.displayName}`);
-        navigate("/");
+        navigate(path);
       })
       .cath((err) => toast.error(err.message));
   };
