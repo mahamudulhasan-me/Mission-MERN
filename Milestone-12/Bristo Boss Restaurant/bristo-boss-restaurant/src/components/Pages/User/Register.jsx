@@ -35,15 +35,29 @@ const Register = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+    const photo = form.photo.value;
     const email = form.email.value;
+    const userInfo = { name, email };
     if (!passError) {
       createNewUser(email, solidPassword)
         .then((result) => {
           const user = result.user;
-          updateProfile(user, { displayName: name })
+          updateProfile(user, { displayName: name, photoURL: photo })
             .then(() => {
-              navigate("/");
-              toast.success("User created successfully");
+              fetch(`http://localhost:5000/users`, {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(userInfo),
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  if (data.insertedId) {
+                    navigate("/");
+                    toast.success("User created successfully");
+                  }
+                });
             })
             .catch((err) => setPassError(err.message));
         })
@@ -72,6 +86,16 @@ const Register = () => {
                 name="name"
                 id="name"
                 placeholder="Enter your name"
+              />
+            </div>
+            <div>
+              <label htmlFor="photo">Photo Url</label> <br />
+              <input
+                required
+                type="url"
+                name="photo"
+                id="photo"
+                placeholder="Enter PhotoURL"
               />
             </div>
             <div>

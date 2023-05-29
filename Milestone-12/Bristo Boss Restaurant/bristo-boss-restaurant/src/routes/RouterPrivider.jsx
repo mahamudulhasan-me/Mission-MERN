@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home/Home";
+import AllUser from "../components/Pages/Dashboard/AllUser/AllUser";
 import MyCart from "../components/Pages/Dashboard/MyCart/MyCart";
 import OurMenu from "../components/Pages/OurMenu/OurMenu";
 import Login from "../components/Pages/User/Login";
@@ -7,6 +8,7 @@ import Register from "../components/Pages/User/Register";
 import Shop from "../components/Shared/Shop/Shop";
 import Dashboard from "../layouts/Dashboard";
 import Main from "../layouts/Main";
+import ProtectedRoute from "../protectedRoute/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,11 +39,23 @@ const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "my-cart",
-        element: <MyCart />,
+        element: (
+          <ProtectedRoute>
+            <MyCart />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "all-user",
+        element: <AllUser />,
       },
     ],
   },

@@ -85,7 +85,7 @@ const Header = () => {
               src={user?.photoURL}
               alt=""
               title={user?.displayName}
-              className="w-full rounded-full"
+              className="w-10 h-10 rounded-full"
             />
           </div>
           <Link onClick={handleLogout}>

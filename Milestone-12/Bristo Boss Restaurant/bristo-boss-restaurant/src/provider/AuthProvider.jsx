@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import axios from "axios";
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
@@ -40,6 +41,15 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoader(false);
+      if (currentUser) {
+        axios
+          .post("http://localhost:5000/jwt", { uid: currentUser?.uid })
+          .then((data) => {
+            localStorage.setItem("access-token", data.data);
+          });
+      } else {
+        localStorage.removeItem("access-token");
+      }
       return () => unsubscribe;
     });
   }, []);
@@ -49,6 +59,7 @@ const AuthProvider = ({ children }) => {
   };
   const authInfo = {
     user,
+    loader,
     createNewUser,
     logInWithEmailAndPassword,
     logInWithGoogle,

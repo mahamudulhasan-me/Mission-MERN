@@ -14,8 +14,22 @@ const SocialSignin = ({ path }) => {
         const user = result.user;
         toast.success(`Welcome ${user.displayName}`);
         navigate(path);
+        const userInfo = { name: user.displayName, email: user.email };
+        fetch(`http://localhost:5000/users`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(userInfo),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.insertedId) {
+              navigate(path);
+            }
+          });
       })
-      .cath((err) => toast.error(err.message));
+      .catch((err) => toast.error(err.message));
   };
   return (
     <div className="mt-5">
