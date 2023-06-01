@@ -3,12 +3,14 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaTrashAlt, FaUsersCog } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import SectionHeader from "../../../Shared/SectionHeader/SectionHeader";
 
 const AllUser = () => {
+  const [axiosSecure] = useAxiosSecure();
   const { data: users = [], refetch } = useQuery(["users"], async () => {
-    const res = await fetch(`http://localhost:5000/users`);
-    return res.json();
+    const res = await axiosSecure.get(`/users`);
+    return res.data;
   });
   const handleMakeAdmin = (user) => {
     Swal.fire({
@@ -82,7 +84,7 @@ const AllUser = () => {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user, index) => (
+                {users?.map((user, index) => (
                   <tr key={user._id}>
                     <th>{index + 1}</th>
 

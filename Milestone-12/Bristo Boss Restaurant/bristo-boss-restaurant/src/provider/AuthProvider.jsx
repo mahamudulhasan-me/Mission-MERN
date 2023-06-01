@@ -16,14 +16,13 @@ export const AuthContext = createContext();
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({});
-  const [loader, setLoader] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   //   google provider
   const googleProvider = new GoogleAuthProvider();
 
   //   sign in with google
   const logInWithGoogle = () => {
-    setLoader(false);
     return signInWithPopup(auth, googleProvider);
   };
 
@@ -40,16 +39,19 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      setLoader(false);
+
       if (currentUser) {
+        setLoading(true);
         axios
           .post("http://localhost:5000/jwt", { uid: currentUser?.uid })
           .then((data) => {
             localStorage.setItem("access-token", data.data);
+            setLoading(false);
           });
       } else {
         localStorage.removeItem("access-token");
       }
+
       return () => unsubscribe;
     });
   }, []);
@@ -59,7 +61,7 @@ const AuthProvider = ({ children }) => {
   };
   const authInfo = {
     user,
-    loader,
+    loading,
     createNewUser,
     logInWithEmailAndPassword,
     logInWithGoogle,

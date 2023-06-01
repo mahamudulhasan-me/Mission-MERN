@@ -2,10 +2,12 @@ import React from "react";
 import { FaHome, FaShoppingBag } from "react-icons/fa";
 import { MdContactPhone, MdRestaurantMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
+import useAdmin from "../../../hooks/useAdmin";
 import AdminNavItems from "./AdminNavItems/AdminNavItems";
 import UserNavItems from "./UserNavItems/UserNavItems";
 const Sidebar = () => {
-  const admin = true;
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="drawer drawer-mobile fixed">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -13,7 +15,7 @@ const Sidebar = () => {
         {/* <!-- Page content here --> */}
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+          className="btn btn-primary drawer-button lg:hidden z-50"
         >
           Open drawer
         </label>
@@ -22,7 +24,7 @@ const Sidebar = () => {
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         {/* <!-- Sidebar content here --> */}
-        <div className="h-full p-3 space-y-2 w-60 text-gray-900 font-cinzel bg-yell font-semibold">
+        <div className="h-full z-30  p-3 space-y-2 w-60 text-gray-900 font-cinzel bg-yell font-semibold">
           <div className=" p-2">
             <Link className="font-cinzel">
               <span className="font-semibold uppercase text-2xl">
@@ -34,7 +36,7 @@ const Sidebar = () => {
           </div>
           <div className="dashboard-item menu divide-y divide-gray-700">
             <ul className="pt-2 pb-4 space-y-1">
-              {admin ? <AdminNavItems /> : <UserNavItems />}
+              {isAdmin ? <AdminNavItems /> : <UserNavItems />}
             </ul>
             <ul className="pt-4 pb-2 space-y-1 text-sm">
               <li>

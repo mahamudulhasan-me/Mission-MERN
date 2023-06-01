@@ -37,8 +37,9 @@ const Register = () => {
     const name = form.name.value;
     const photo = form.photo.value;
     const email = form.email.value;
-    const userInfo = { name, email };
+
     if (!passError) {
+      setPassError("");
       createNewUser(email, solidPassword)
         .then((result) => {
           const user = result.user;
@@ -49,7 +50,7 @@ const Register = () => {
                 headers: {
                   "content-type": "application/json",
                 },
-                body: JSON.stringify(userInfo),
+                body: JSON.stringify({ name, email, userUid: user?.uid }),
               })
                 .then((response) => response.json())
                 .then((data) => {
@@ -62,7 +63,6 @@ const Register = () => {
             .catch((err) => setPassError(err.message));
         })
         .catch((error) => setPassError(error.message));
-      console.log({ name, email, solidPassword });
     }
   };
 

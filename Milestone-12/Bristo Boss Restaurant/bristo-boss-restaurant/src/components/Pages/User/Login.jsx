@@ -43,6 +43,7 @@ const Login = () => {
       logInWithEmailAndPassword(email, password)
         .then((result) => {
           const user = result.user;
+          console.log(user);
           toast.success(`Welcome ${user.displayName}`);
           navigate(path);
         })

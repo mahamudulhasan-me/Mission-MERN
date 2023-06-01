@@ -44,3 +44,6 @@ body {
 .menu a:active {
   @apply bg-slate-900 bg-opacity-80 rounded-lg;
 }
+.add-item label {
+  @apply font-semibold text-sm;
+}

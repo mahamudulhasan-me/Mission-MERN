@@ -14,7 +14,11 @@ const SocialSignin = ({ path }) => {
         const user = result.user;
         toast.success(`Welcome ${user.displayName}`);
         navigate(path);
-        const userInfo = { name: user.displayName, email: user.email };
+        const userInfo = {
+          name: user.displayName,
+          email: user.email,
+          userUid: user.uid,
+        };
         fetch(`http://localhost:5000/users`, {
           method: "POST",
           headers: {
