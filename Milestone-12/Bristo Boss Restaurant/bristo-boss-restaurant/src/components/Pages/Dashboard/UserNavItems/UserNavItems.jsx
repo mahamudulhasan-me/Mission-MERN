@@ -14,7 +14,11 @@ const UserNavItems = () => {
   const [cart] = useCart();
   return (
     <>
-      <DashboardNavItem to={"/dashboard"} icon={AiTwotoneHome} name="Home" />
+      <DashboardNavItem
+        to={"/dashboard/user"}
+        icon={AiTwotoneHome}
+        name="Home"
+      />
       <DashboardNavItem
         to={"/dashboard"}
         icon={FaCalendarAlt}

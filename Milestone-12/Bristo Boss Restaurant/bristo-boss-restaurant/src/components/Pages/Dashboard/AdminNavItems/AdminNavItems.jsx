@@ -12,7 +12,7 @@ const AdminNavItems = () => {
   return (
     <>
       <DashboardNavItem
-        to={"/dashboard"}
+        to={"/dashboard/admin"}
         icon={AiTwotoneHome}
         name="Admin Home"
       />

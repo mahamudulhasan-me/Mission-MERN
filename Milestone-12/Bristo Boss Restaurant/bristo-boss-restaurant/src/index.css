@@ -47,3 +47,6 @@ body {
 .add-item label {
   @apply font-semibold text-sm;
 }
+.admin-stats {
+  @apply flex justify-center items-center gap-5 py-5   rounded-lg text-white;
+}

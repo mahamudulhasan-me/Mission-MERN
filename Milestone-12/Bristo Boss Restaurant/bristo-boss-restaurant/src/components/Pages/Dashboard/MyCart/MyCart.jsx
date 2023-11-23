@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useCart from "../../../../hooks/useCart";
 import SectionHeader from "../../../Shared/SectionHeader/SectionHeader";
@@ -20,7 +21,7 @@ const MyCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/carts/${id}`, {
+        fetch(`https://bristo-boss-server-psi.vercel.app/carts/${id}`, {
           method: "DELETE",
         })
           .then((response) => response.json())
@@ -42,10 +43,17 @@ const MyCart = () => {
       <div className="bg-white p-5">
         <div className="flex text-slate-950  mb-3 font-semibold font-cinzel justify-between items-center ">
           <p className="text-2xl">Total Order: {cart.length}</p>{" "}
-          <p className="text-2xl">Total Price: ${totalPrice}</p>{" "}
-          <button className="bg-yell py-2 px-3 rounded-lg text-white">
-            Pay
-          </button>
+          <p className="text-2xl">
+            Total Price: ${parseFloat(totalPrice.toFixed(2))}
+          </p>{" "}
+          <Link to={"/dashboard/payment"}>
+            <button
+              disabled={!totalPrice && true}
+              className="bg-yell py-2 px-3 rounded-lg text-white"
+            >
+              Pay
+            </button>
+          </Link>
         </div>
         <div className="overflow-x-auto">
           <table className="table table-zebra w-full">

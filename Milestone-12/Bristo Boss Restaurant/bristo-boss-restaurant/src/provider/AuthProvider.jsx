@@ -43,7 +43,9 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         setLoading(true);
         axios
-          .post("http://localhost:5000/jwt", { uid: currentUser?.uid })
+          .post("https://bristo-boss-server-psi.vercel.app/jwt", {
+            uid: currentUser?.uid,
+          })
           .then((data) => {
             localStorage.setItem("access-token", data.data);
             setLoading(false);

@@ -19,7 +19,7 @@ const SocialSignin = ({ path }) => {
           email: user.email,
           userUid: user.uid,
         };
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://bristo-boss-server-psi.vercel.app/users`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

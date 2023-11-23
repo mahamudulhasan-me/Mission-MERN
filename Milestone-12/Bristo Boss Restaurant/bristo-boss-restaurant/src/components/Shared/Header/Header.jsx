@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import { FaAngleDown, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import useAdmin from "../../../hooks/useAdmin";
 import useCart from "../../../hooks/useCart";
 import { AuthContext } from "../../../provider/AuthProvider";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const { user, logOut } = useContext(AuthContext);
   const [cart] = useCart();
+  const [isAdmin] = useAdmin();
   console.log(cart);
   console.log({ user });
   const handleLogout = () => {
@@ -61,14 +63,20 @@ const Header = () => {
       <li>
         <Link>Contact Us</Link>
       </li>
-      <li>
-        <Link>Dashboard</Link>
-      </li>
+
+      {isAdmin ? (
+        <Link to={"/dashboard/admin"}>
+          <li>Dashboard</li>
+        </Link>
+      ) : (
+        <Link to={"/dashboard/user"}>
+          <li>Dashboard</li>
+        </Link>
+      )}
 
       <li>
         <Link>Our Shop</Link>
       </li>
-
       <Link to={"/dashboard/my-cart"}>
         <div className="indicator mx-2">
           <span className="indicator-item badge badge-primary">

@@ -45,7 +45,7 @@ const Register = () => {
           const user = result.user;
           updateProfile(user, { displayName: name, photoURL: photo })
             .then(() => {
-              fetch(`http://localhost:5000/users`, {
+              fetch(`https://bristo-boss-server-psi.vercel.app/users`, {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",

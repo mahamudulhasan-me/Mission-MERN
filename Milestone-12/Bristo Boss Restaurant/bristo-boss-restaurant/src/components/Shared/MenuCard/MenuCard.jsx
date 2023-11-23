@@ -14,7 +14,7 @@ const MenuCard = ({ menuDetails }) => {
   const handleAddToCart = () => {
     const orderItem = { menuId: _id, name, image, price, userUid: user?.uid };
     if (user) {
-      fetch(`http://localhost:5000/carts`, {
+      fetch(`https://bristo-boss-server-psi.vercel.app/carts`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

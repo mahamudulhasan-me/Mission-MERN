@@ -1,9 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home/Home";
 import AddItem from "../components/Pages/Dashboard/AddItems/AddItem";
+import AdminHome from "../components/Pages/Dashboard/AdminHome/AdminHome";
 import AllUser from "../components/Pages/Dashboard/AllUser/AllUser";
 import ManageItems from "../components/Pages/Dashboard/ManageItems/ManageItems";
 import MyCart from "../components/Pages/Dashboard/MyCart/MyCart";
+import Payment from "../components/Pages/Dashboard/Payment/Payment";
+import UserHome from "../components/Pages/Dashboard/UserHome/UserHome";
 import OurMenu from "../components/Pages/OurMenu/OurMenu";
 import Login from "../components/Pages/User/Login";
 import Register from "../components/Pages/User/Register";
@@ -49,12 +52,29 @@ const router = createBrowserRouter([
     ),
     children: [
       {
+        path: "user",
+        element: <UserHome />,
+      },
+      {
+        path: "admin",
+        element: (
+          <AdminRoute>
+            <AdminHome />
+          </AdminRoute>
+        ),
+      },
+      {
         path: "my-cart",
         element: <MyCart />,
       },
+
       {
         path: "all-user",
-        element: <AllUser />,
+        element: (
+          <AdminRoute>
+            <AllUser />
+          </AdminRoute>
+        ),
       },
       {
         path: "add-item",
@@ -71,6 +91,10 @@ const router = createBrowserRouter([
             <ManageItems />
           </AdminRoute>
         ),
+      },
+      {
+        path: "payment",
+        element: <Payment />,
       },
     ],
   },

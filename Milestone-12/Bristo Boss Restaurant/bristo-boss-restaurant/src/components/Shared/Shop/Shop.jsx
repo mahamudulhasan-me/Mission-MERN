@@ -10,7 +10,7 @@ const Shop = () => {
   const [loader, setLoader] = useState(false);
   console.log(menu);
   useEffect(() => {
-    fetch(`http://localhost:5000/menu`)
+    fetch(`https://bristo-boss-server-psi.vercel.app/menu`)
       .then((response) => response.json())
       .then((data) => {
         setMenuByCategory(
